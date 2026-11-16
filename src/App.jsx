@@ -3231,21 +3231,23 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating WhatsApp Us Button (Refined Layout) */}
+      {/* Floating WhatsApp Action Button (Sleek Circular Floating Badge) */}
       <a
         href="https://wa.me/917386759777?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Ananta%20Vijaya%20soaps"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 inline-flex items-center gap-2 px-3.5 py-2.5 sm:px-4.5 sm:py-3 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-[0_8px_25px_rgba(37,211,102,0.45)] border border-white/30 transition-all duration-300 hover:scale-105 active:scale-95 group select-none"
+        title="Chat on WhatsApp"
+        className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 group flex items-center select-none"
       >
-        {/* Official WhatsApp SVG Icon */}
-        <svg className="w-5 h-5 sm:w-5.5 sm:h-5.5 fill-current shrink-0 text-white" viewBox="0 0 24 24">
-          <path d="M12.031 2C6.496 2 2 6.502 2 12.046c0 1.77.462 3.498 1.34 5.02L2 22l5.086-1.334a10.024 10.024 0 0 0 4.945 1.28h.004c5.534 0 10.031-4.503 10.031-10.046 0-2.684-1.045-5.207-2.94-7.106A9.972 9.972 0 0 0 12.031 2zm0 18.367h-.003a8.318 8.318 0 0 1-4.24-1.155l-.304-.18-3.155.828.841-3.076-.198-.315a8.337 8.337 0 0 1-1.278-4.423c0-4.603 3.74-8.349 8.342-8.349 2.228 0 4.324.869 5.898 2.447a8.293 8.293 0 0 1 2.44 5.901c0 4.604-3.743 8.35-8.344 8.35zm4.57-6.246c-.25-.125-1.478-.73-1.707-.813-.23-.083-.396-.125-.563.125-.166.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.056-.39-2.012-1.242c-.744-.664-1.247-1.484-1.393-1.734-.146-.25-.016-.385.11-.51.112-.112.25-.292.375-.438.125-.146.166-.25.25-.417.083-.166.042-.312-.02-.437-.063-.125-.563-1.355-.771-1.855-.203-.487-.41-.421-.563-.429-.146-.008-.313-.01-.479-.01-.167 0-.438.063-.667.313-.23.25-.875.855-.875 2.085s.896 2.418 1.021 2.585c.125.166 1.762 2.69 4.269 3.773.596.258 1.062.412 1.425.528.599.191 1.144.164 1.575.1.48-.072 1.478-.604 1.687-1.188.208-.584.208-1.084.146-1.188-.063-.104-.23-.167-.479-.292z"/>
-        </svg>
-        <span className="font-sans font-semibold text-xs tracking-wider uppercase text-white drop-shadow-sm whitespace-nowrap">
-          WhatsApp Us
-        </span>
+        <div className="flex items-center gap-2 bg-[#25D366] hover:bg-[#20ba5a] text-white p-3 sm:px-4 sm:py-3 rounded-full shadow-[0_6px_22px_rgba(37,211,102,0.45)] border-2 border-white transition-all duration-300 group-hover:scale-105 active:scale-95">
+          <svg className="w-6 h-6 fill-current text-white shrink-0" viewBox="0 0 24 24">
+            <path d="M12.031 2C6.496 2 2 6.502 2 12.046c0 1.77.462 3.498 1.34 5.02L2 22l5.086-1.334a10.024 10.024 0 0 0 4.945 1.28h.004c5.534 0 10.031-4.503 10.031-10.046 0-2.684-1.045-5.207-2.94-7.106A9.972 9.972 0 0 0 12.031 2zm0 18.367h-.003a8.318 8.318 0 0 1-4.24-1.155l-.304-.18-3.155.828.841-3.076-.198-.315a8.337 8.337 0 0 1-1.278-4.423c0-4.603 3.74-8.349 8.342-8.349 2.228 0 4.324.869 5.898 2.447a8.293 8.293 0 0 1 2.44 5.901c0 4.604-3.743 8.35-8.344 8.35zm4.57-6.246c-.25-.125-1.478-.73-1.707-.813-.23-.083-.396-.125-.563.125-.166.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.056-.39-2.012-1.242c-.744-.664-1.247-1.484-1.393-1.734-.146-.25-.016-.385.11-.51.112-.112.25-.292.375-.438.125-.146.166-.25.25-.417.083-.166.042-.312-.02-.437-.063-.125-.563-1.355-.771-1.855-.203-.487-.41-.421-.563-.429-.146-.008-.313-.01-.479-.01-.167 0-.438.063-.667.313-.23.25-.875.855-.875 2.085s.896 2.418 1.021 2.585c.125.166 1.762 2.69 4.269 3.773.596.258 1.062.412 1.425.528.599.191 1.144.164 1.575.1.48-.072 1.478-.604 1.687-1.188.208-.584.208-1.084.146-1.188-.063-.104-.23-.167-.479-.292z"/>
+          </svg>
+          <span className="hidden sm:inline font-sans font-semibold text-xs tracking-wider uppercase text-white drop-shadow-sm pr-1">
+            WhatsApp
+          </span>
+        </div>
       </a>
 
       {/* Floating Role Portal Pill (Desktop & Tablet only; on mobile, cleanly accessible in the Menu drawer & Footer) */}
