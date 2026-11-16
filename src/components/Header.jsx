@@ -15,22 +15,22 @@ export default function Header({ cartCount = 0, wishlistCount = 0, onCartClick, 
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="h-20 sm:h-24 md:h-[96px] lg:h-[104px] bg-surface/95 backdrop-blur-md transition-all border-b border-white/60">
-        <div className="max-w-[1600px] h-full mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
+      <div className="h-16 sm:h-20 md:h-24 lg:h-[104px] bg-surface/95 backdrop-blur-md transition-all border-b border-white/60">
+        <div className="max-w-[1600px] h-full mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between">
           
           {/* 1. Left: Logo Brand Group */}
-          <div className="shrink-0 flex items-center">
-            <a href="#" className="flex items-center gap-3 sm:gap-4 group cursor-pointer text-left py-1">
+          <div className="flex items-center min-w-0 pr-1">
+            <a href="#" className="flex items-center gap-2 sm:gap-3.5 group cursor-pointer text-left py-1 min-w-0">
               <img
                 alt="Ananta Vijaya Logo"
-                className="h-14 sm:h-18 md:h-[76px] lg:h-[84px] w-auto object-contain shrink-0 drop-shadow-[0_4px_14px_rgba(123,88,2,0.25)] transition-transform duration-300 group-hover:scale-105"
+                className="h-11 sm:h-14 md:h-[76px] lg:h-[84px] w-auto object-contain shrink-0 drop-shadow-[0_4px_14px_rgba(123,88,2,0.25)] transition-transform duration-300 group-hover:scale-105"
                 src={ASSETS.logo}
               />
-              <div className="flex flex-col justify-center whitespace-nowrap">
-                <span className="font-headline-sm text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18.5px] font-bold text-primary tracking-[0.06em] uppercase leading-none font-serif">
-                  Ananta Vijaya Pvt. Ltd.
+              <div className="flex flex-col justify-center min-w-0">
+                <span className="font-headline-sm text-[12.5px] xs:text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18.5px] font-bold text-primary tracking-[0.04em] uppercase leading-tight font-serif truncate">
+                  Ananta Vijaya
                 </span>
-                <span className="font-label-sm text-[7.5px] sm:text-[9px] md:text-[9.5px] lg:text-[10px] text-secondary tracking-[0.18em] uppercase font-semibold mt-1">
+                <span className="font-label-sm text-[7px] sm:text-[9px] md:text-[9.5px] lg:text-[10px] text-secondary tracking-[0.16em] uppercase font-semibold mt-0.5 truncate">
                   Nature's Trust &amp; Herbal Purity
                 </span>
               </div>
@@ -83,39 +83,46 @@ export default function Header({ cartCount = 0, wishlistCount = 0, onCartClick, 
             </a>
           </nav>
 
-          {/* 3. Right: Header Action Icons (Search and Shopping Bag only) */}
-          <div className="shrink-0 flex items-center justify-end gap-2 sm:gap-3 text-primary">
+          {/* 3. Right: Header Action Icons (Search, Bag, and Hamburger 3-lines) */}
+          <div className="shrink-0 flex items-center justify-end gap-1 sm:gap-2.5 text-primary">
             <button
               type="button"
               aria-label="Search"
-              className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-secondary transition-colors"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-secondary transition-colors"
             >
-              <span className="material-symbols-outlined text-[21px] sm:text-[23px]">search</span>
+              <span className="material-symbols-outlined text-[20px] sm:text-[23px]">search</span>
             </button>
             <button
               type="button"
               aria-label="Shopping Bag"
               onClick={onCartClick}
-              className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-secondary transition-colors relative"
+              className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-secondary transition-colors relative"
             >
-              <span className="material-symbols-outlined text-[21px] sm:text-[23px]">shopping_bag</span>
+              <span className="material-symbols-outlined text-[20px] sm:text-[23px]">shopping_bag</span>
               {cartCount > 0 && (
-                <span className="absolute -top-0.5 -right-0.5 bg-[#00271d] text-[#fdcd73] border border-[#C59A45]/50 text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-sm">
+                <span className="absolute -top-0.5 -right-0.5 bg-[#00271d] text-[#fdcd73] border border-[#C59A45]/50 text-[10px] w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full flex items-center justify-center font-bold shadow-sm">
                   {cartCount}
                 </span>
               )}
             </button>
 
-            {/* Mobile/Tablet Menu Button */}
+            {/* Mobile/Tablet Menu Button (Clean 3-Lines SVG) */}
             <button
               type="button"
-              className="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-secondary transition-colors text-primary"
+              className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-secondary transition-colors text-primary focus:outline-none focus:ring-1 focus:ring-[#C59A45]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Toggle Menu"
+              aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+              title="Toggle Menu"
             >
-              <span className="material-symbols-outlined text-[25px] sm:text-[26px]">
-                {mobileMenuOpen ? 'close' : 'menu'}
-              </span>
+              {mobileMenuOpen ? (
+                <svg className="w-5.5 h-5.5 sm:w-6 sm:h-6 text-[#00271d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-5.5 h-5.5 sm:w-6 sm:h-6 text-[#00271d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+                </svg>
+              )}
             </button>
           </div>
         </div>

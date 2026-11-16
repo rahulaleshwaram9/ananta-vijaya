@@ -462,25 +462,25 @@ export default function App() {
         </div>
 
         {/* Main Navbar */}
-        <div className="h-20 sm:h-24 md:h-[96px] lg:h-[104px] bg-white/95 backdrop-blur-md border-b border-white transition-all relative">
-          <div className="max-w-[1600px] h-full mx-auto px-4 sm:px-8 lg:px-12 flex items-center justify-between">
+        <div className="h-16 sm:h-20 md:h-24 lg:h-[104px] bg-white/95 backdrop-blur-md border-b border-white transition-all relative">
+          <div className="max-w-[1600px] h-full mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between">
             {/* 1. Left: Logo Group */}
-            <div className="shrink-0 flex items-center">
+            <div className="flex items-center min-w-0 pr-1">
               <button
                 onClick={() => navigateTo('home')}
-                className="flex items-center gap-3 sm:gap-4 shrink-0 group cursor-pointer text-left py-1"
+                className="flex items-center gap-2 sm:gap-3.5 group cursor-pointer text-left py-1 min-w-0"
                 type="button"
               >
                 <img
                   alt="Ananta Vijaya Sacred Logo"
-                  className="h-14 sm:h-18 md:h-[76px] lg:h-[84px] w-auto object-contain shrink-0 drop-shadow-[0_4px_14px_rgba(123,88,2,0.25)] transition-transform duration-300 group-hover:scale-105"
+                  className="h-11 sm:h-14 md:h-[76px] lg:h-[84px] w-auto object-contain shrink-0 drop-shadow-[0_4px_14px_rgba(123,88,2,0.25)] transition-transform duration-300 group-hover:scale-105"
                   src={ASSETS.logo}
                 />
-                <div className="flex flex-col justify-center whitespace-nowrap">
-                  <span className="font-serif text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18.5px] font-bold text-[#00271d] tracking-[0.06em] uppercase leading-none">
-                    Ananta Vijaya Pvt. Ltd.
+                <div className="flex flex-col justify-center min-w-0">
+                  <span className="font-serif text-[12.5px] xs:text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18.5px] font-bold text-[#00271d] tracking-[0.04em] uppercase leading-tight truncate">
+                    Ananta Vijaya
                   </span>
-                  <span className="font-label-sm text-[7.5px] sm:text-[9px] md:text-[9.5px] lg:text-[10px] text-[#7B5802] tracking-[0.18em] uppercase font-semibold mt-1">
+                  <span className="font-label-sm text-[7px] sm:text-[9px] md:text-[9.5px] lg:text-[10px] text-[#7B5802] tracking-[0.16em] uppercase font-semibold mt-0.5 truncate">
                     Nature's Trust &amp; Herbal Purity
                   </span>
                 </div>
@@ -554,46 +554,53 @@ export default function App() {
               </button>
             </nav>
 
-            {/* 3. Right: Action Icons (Search & Shopping Bag only, beautifully balanced) */}
-            <div className="shrink-0 flex items-center gap-2 sm:gap-3 text-[#00271d]">
+            {/* 3. Right: Action Icons (Search, Shopping Bag & Mobile 3-Lines Hamburger) */}
+            <div className="shrink-0 flex items-center gap-1 sm:gap-2.5 text-[#00271d]">
               <button
                 aria-label="Search Collection"
                 onClick={() => {
                   navigateTo('our-soaps');
                   showToast("Browsing complete soap collection");
                 }}
-                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-[#7B5802] transition-colors"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-[#7B5802] transition-colors"
                 type="button"
                 title="Search Soaps"
               >
-                <span className="material-symbols-outlined text-[21px] sm:text-[23px]">search</span>
+                <span className="material-symbols-outlined text-[20px] sm:text-[23px]">search</span>
               </button>
 
               <button
                 aria-label="Shopping Bag"
                 onClick={() => setCartOpen(true)}
-                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-[#7B5802] transition-colors relative"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-[#7B5802] transition-colors relative"
                 type="button"
                 title="Shopping Bag"
               >
-                <span className="material-symbols-outlined text-[21px] sm:text-[23px]">shopping_bag</span>
+                <span className="material-symbols-outlined text-[20px] sm:text-[23px]">shopping_bag</span>
                 {cartCount > 0 && (
-                  <span className="absolute -top-0.5 -right-0.5 bg-[#00271d] text-[#fdcd73] border border-[#C59A45]/50 text-[10px] w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-sm">
+                  <span className="absolute -top-0.5 -right-0.5 bg-[#00271d] text-[#fdcd73] border border-[#C59A45]/50 text-[10px] w-4.5 h-4.5 sm:w-5 sm:h-5 rounded-full flex items-center justify-center font-bold shadow-sm">
                     {cartCount}
                   </span>
                 )}
               </button>
 
-              {/* Mobile/Tablet Hamburger Toggle */}
+              {/* Mobile/Tablet Hamburger Toggle (3 Lines) */}
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="lg:hidden w-10 h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-[#7B5802] transition-colors text-[#00271d]"
-                aria-label="Toggle Navigation Menu"
+                className="lg:hidden w-9 h-9 sm:w-10 sm:h-10 rounded-full flex items-center justify-center hover:bg-[#C59A45]/15 hover:text-[#7B5802] transition-colors text-[#00271d] focus:outline-none focus:ring-1 focus:ring-[#C59A45]"
+                aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
+                title="Toggle Menu"
               >
-                <span className="material-symbols-outlined text-[25px] sm:text-[26px]">
-                  {mobileMenuOpen ? 'close' : 'menu'}
-                </span>
+                {mobileMenuOpen ? (
+                  <svg className="w-5.5 h-5.5 sm:w-6 sm:h-6 text-[#00271d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-5.5 h-5.5 sm:w-6 sm:h-6 text-[#00271d]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+                  </svg>
+                )}
               </button>
             </div>
           </div>
@@ -700,6 +707,17 @@ export default function App() {
                   <span className="material-symbols-outlined text-[16px]">chat</span>
                   <span>WhatsApp Inquiry Support</span>
                 </a>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    handleOpenPortal();
+                  }}
+                  className="w-full py-2 px-4 bg-[#00271d]/5 hover:bg-[#00271d]/10 text-[#00271d] font-semibold text-xs rounded-lg flex items-center justify-center gap-2 border border-[#C59A45]/30 transition-colors"
+                >
+                  <span className="material-symbols-outlined text-[16px] text-[#C59A45]">admin_panel_settings</span>
+                  <span>Staff &amp; Roles Portal ({currentUser ? ROLE_LABELS[currentUser.role] : 'Sign In'})</span>
+                </button>
               </div>
             </div>
           )}
@@ -3062,7 +3080,7 @@ export default function App() {
       {/* ============================================================ */}
       {/* FOOTER */}
       {/* ============================================================ */}
-      <footer className="w-full bg-[#00271d] text-[#FFF8F1] pt-14 pb-8 border-t border-[#C59A45]/30">
+      <footer className="w-full bg-[#00271d] text-[#FFF8F1] pt-14 pb-24 sm:pb-14 border-t border-[#C59A45]/30">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#C59A45]/20">
             {/* Column 1: Brand Info */}
@@ -3213,25 +3231,25 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Floating Elegant WhatsApp Button */}
+      {/* Floating WhatsApp Us Button (Refined Layout) */}
       <a
         href="https://wa.me/917386759777?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20Ananta%20Vijaya%20soaps"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"
-        className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 inline-flex items-center gap-2.5 px-4.5 py-2.5 sm:px-5 sm:py-3 rounded-full bg-gradient-to-r from-[#25D366] to-[#1EBE5D] hover:from-[#20BD5A] hover:to-[#17A54F] text-white shadow-[0_10px_25px_rgba(37,211,102,0.38)] border border-[#25D366]/40 transition-all duration-300 hover:scale-105 group select-none"
+        className="fixed bottom-5 right-4 sm:bottom-6 sm:right-6 z-40 inline-flex items-center gap-2 px-3.5 py-2.5 sm:px-4.5 sm:py-3 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white shadow-[0_8px_25px_rgba(37,211,102,0.45)] border border-white/30 transition-all duration-300 hover:scale-105 active:scale-95 group select-none"
       >
         {/* Official WhatsApp SVG Icon */}
         <svg className="w-5 h-5 sm:w-5.5 sm:h-5.5 fill-current shrink-0 text-white" viewBox="0 0 24 24">
           <path d="M12.031 2C6.496 2 2 6.502 2 12.046c0 1.77.462 3.498 1.34 5.02L2 22l5.086-1.334a10.024 10.024 0 0 0 4.945 1.28h.004c5.534 0 10.031-4.503 10.031-10.046 0-2.684-1.045-5.207-2.94-7.106A9.972 9.972 0 0 0 12.031 2zm0 18.367h-.003a8.318 8.318 0 0 1-4.24-1.155l-.304-.18-3.155.828.841-3.076-.198-.315a8.337 8.337 0 0 1-1.278-4.423c0-4.603 3.74-8.349 8.342-8.349 2.228 0 4.324.869 5.898 2.447a8.293 8.293 0 0 1 2.44 5.901c0 4.604-3.743 8.35-8.344 8.35zm4.57-6.246c-.25-.125-1.478-.73-1.707-.813-.23-.083-.396-.125-.563.125-.166.25-.646.813-.792.98-.146.166-.292.187-.542.062s-1.056-.39-2.012-1.242c-.744-.664-1.247-1.484-1.393-1.734-.146-.25-.016-.385.11-.51.112-.112.25-.292.375-.438.125-.146.166-.25.25-.417.083-.166.042-.312-.02-.437-.063-.125-.563-1.355-.771-1.855-.203-.487-.41-.421-.563-.429-.146-.008-.313-.01-.479-.01-.167 0-.438.063-.667.313-.23.25-.875.855-.875 2.085s.896 2.418 1.021 2.585c.125.166 1.762 2.69 4.269 3.773.596.258 1.062.412 1.425.528.599.191 1.144.164 1.575.1.48-.072 1.478-.604 1.687-1.188.208-.584.208-1.084.146-1.188-.063-.104-.23-.167-.479-.292z"/>
         </svg>
-        <span className="font-sans font-semibold text-xs tracking-wider uppercase text-white drop-shadow-sm">
+        <span className="font-sans font-semibold text-xs tracking-wider uppercase text-white drop-shadow-sm whitespace-nowrap">
           WhatsApp Us
         </span>
       </a>
 
-      {/* Floating Role Portal Pill (Bottom Left) */}
-      <div className="fixed bottom-5 left-5 sm:bottom-6 sm:left-6 z-40">
+      {/* Floating Role Portal Pill (Desktop & Tablet only; on mobile, cleanly accessible in the Menu drawer & Footer) */}
+      <div className="hidden sm:block fixed bottom-6 left-6 z-40">
         <button
           type="button"
           onClick={handleOpenPortal}
