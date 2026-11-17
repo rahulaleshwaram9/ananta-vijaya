@@ -53,8 +53,8 @@ export default function CartDrawer({ isOpen, onClose, cartItems, onUpdateQuantit
                 key={item.id}
                 className="flex items-center gap-4 p-3 bg-surface-container rounded-xl border border-[#E8D4B5]/60 shadow-sm"
               >
-                <div className="w-16 h-16 bg-surface/60 rounded-lg flex items-center justify-center p-1 shrink-0">
-                  <img src={item.image} alt={item.title} className="max-h-full object-contain" />
+                <div className="w-16 h-16 bg-surface/60 rounded-lg flex items-center justify-center p-1 shrink-0 overflow-hidden">
+                  <img src={item.image} alt={item.title} className="max-h-full max-w-full object-contain rounded" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="font-serif font-semibold text-sm text-[#173D32] truncate">

@@ -94,7 +94,13 @@ export default {
         "headline-md": ["Playfair Display", "serif"],
         "display": ["Playfair Display", "serif"],
         "serif": ["Playfair Display", "serif"],
-        "sans": ["Inter", "sans-serif"]
+        "sans": ["Inter", "sans-serif"],
+        "italianno": ["'Italianno'", "cursive", "serif"],
+        "cinzel": ["Cinzel", "serif"],
+        "cormorant": ["Cormorant Garamond", "serif"],
+        "formal": ["Cinzel", "'Cormorant Garamond'", "'Playfair Display'", "serif"],
+        "script": ["'Alex Brush'", "'Great Vibes'", "cursive", "serif"],
+        "edwardian": ["Cinzel", "'Cormorant Garamond'", "'Playfair Display'", "serif"]
       },
       fontSize: {
         "label-lg": ["13px", { lineHeight: "18px", letterSpacing: "0.12em", fontWeight: "500" }],

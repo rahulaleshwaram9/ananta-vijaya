@@ -14,13 +14,23 @@ export default function Hero({ onSelectSoap }) {
           
           {/* Left Editorial Column */}
           <div className="lg:col-span-5 flex flex-col justify-center pr-0 lg:pr-space-md">
-            {/* Eyebrow Badge */}
-            <div className="inline-flex items-center gap-space-sm mb-space-md">
-              <span className="w-8 h-[1px] bg-secondary"></span>
-              <span className="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary font-semibold">
+            {/* Eyebrow Ornament */}
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3 mb-4 w-full">
+              <div className="flex items-center gap-1.5 text-[#C59A45]">
+                <span className="w-6 sm:w-10 h-[1px] bg-gradient-to-r from-transparent to-[#C59A45]"></span>
+                <svg className="w-3 h-3 text-[#C59A45]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
+                </svg>
+              </div>
+              <span className="font-label-sm text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-[#7B5802] font-semibold text-center">
                 Natural Handmade Soaps
               </span>
-              <span className="w-8 h-[1px] bg-secondary"></span>
+              <div className="flex items-center gap-1.5 text-[#C59A45]">
+                <svg className="w-3 h-3 text-[#C59A45]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
+                </svg>
+                <span className="w-6 sm:w-10 h-[1px] bg-gradient-to-l from-transparent to-[#C59A45]"></span>
+              </div>
             </div>
 
             {/* Main Headline */}
@@ -54,20 +64,22 @@ export default function Hero({ onSelectSoap }) {
             </div>
 
             {/* Trust Badge Row */}
-            <div className="pt-space-md flex flex-wrap items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
-              <div className="flex items-center gap-space-xs">
-                <span className="material-symbols-outlined text-secondary text-[16px]">verified</span>
-                <span>Handcrafted</span>
-              </div>
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
-              <div className="flex items-center gap-space-xs">
-                <span className="material-symbols-outlined text-secondary text-[16px]">spa</span>
-                <span>Devotional Pure Herbs</span>
-              </div>
-              <span className="w-1.5 h-1.5 rounded-full bg-secondary/50"></span>
-              <div className="flex items-center gap-space-xs">
-                <span className="material-symbols-outlined text-secondary text-[16px]">local_florist</span>
-                <span>Sacred Botanicals</span>
+            <div className="pt-2 flex justify-center lg:justify-start w-full">
+              <div className="inline-flex items-center justify-center gap-2 xs:gap-2.5 sm:gap-4 px-3 sm:px-4 py-1.5 sm:py-1 rounded-full bg-white/95 border border-[#C59A45]/40 shadow-[0_2px_12px_rgba(123,88,2,0.06)] text-[#00271d] text-[9.5px] xs:text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold select-none">
+                <div className="inline-flex items-center gap-1 sm:gap-1.5">
+                  <span className="material-symbols-outlined text-[#7B5802] text-[14px] sm:text-[16px]">verified</span>
+                  <span>Handcrafted</span>
+                </div>
+                <span className="w-1 h-1 rounded-full bg-[#C59A45]/60 shrink-0"></span>
+                <div className="inline-flex items-center gap-1 sm:gap-1.5">
+                  <span className="material-symbols-outlined text-[#7B5802] text-[14px] sm:text-[16px]">spa</span>
+                  <span><span className="hidden sm:inline">Devotional </span>Pure Herbs</span>
+                </div>
+                <span className="w-1 h-1 rounded-full bg-[#C59A45]/60 shrink-0"></span>
+                <div className="inline-flex items-center gap-1 sm:gap-1.5">
+                  <span className="material-symbols-outlined text-[#7B5802] text-[14px] sm:text-[16px]">local_florist</span>
+                  <span>Sacred Botanicals</span>
+                </div>
               </div>
             </div>
           </div>
@@ -118,28 +130,7 @@ export default function Hero({ onSelectSoap }) {
                     <span className="font-serif text-[8px] sm:text-[9.5px] lg:text-[10px] uppercase tracking-[0.24em] text-[#7b5802] font-semibold leading-tight">The</span>
                     <span className="font-serif text-[12px] sm:text-[14.5px] lg:text-[16px] font-bold text-[#173D32] tracking-wider uppercase leading-tight my-0.5">Divine</span>
                     <span className="font-serif text-[8.5px] sm:text-[10px] lg:text-[10.5px] font-semibold text-[#7b5802] tracking-wider uppercase leading-tight">Collection</span>
-                    {/* Lotus Icon */}
-                    <svg className="w-4 h-4 text-[#C59A45] mt-0.5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M12 3c-1.5 2.5-3 5-3 8 0 2.5 1.5 4 3 5 1.5-1 3-2.5 3-5 0-3-1.5-5.5-3-8zm-4.5 5.5C6.3 10 5 12 5 14c0 2 1.3 3.5 3 4.2-.8-1.5-1-3.2-.5-4.7.4-1.5 1.3-3.2 0-5zm9 0c-1.3 1.8-.4 3.5 0 5 .5 1.5.3 3.2-.5 4.7 1.7-.7 3-2.2 3-4.2 0-2-1.3-4-2.5-5.5z"/>
-                    </svg>
                   </div>
-                </div>
-              </div>
-
-              {/* 8. "CONSECRATED BAR" Forest Green Ribbon Badge (Centered in Arch Opening) */}
-              <div className="absolute top-[37%] left-1/2 -translate-x-1/2 z-25 pointer-events-none">
-                <div className="inline-flex items-center gap-2 sm:gap-3 px-4.5 sm:px-6 py-1.5 sm:py-2 rounded-full bg-[#063426] border border-[#d4af37] shadow-[0_8px_20px_rgba(0,39,29,0.5)] ring-1 ring-[#fdcd73]/60 backdrop-blur-sm">
-                  {/* Left Lotus */}
-                  <svg className="w-4 sm:w-4.5 h-4 sm:h-4.5 text-[#fdcd73] shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.5 2 2 6.5 2 12c4 0 7-1.5 9-4 2 2.5 5 4 9 4 0-5.5-4.5-10-10-10zm-1 9c-1.5 1.5-3.5 2.5-6 2.8 1-2.5 3-4.5 6-5.3V11zm2 0V8.5c3 .8 5 2.8 6 5.3-2.5-.3-4.5-1.3-6-2.8z"/>
-                  </svg>
-                  <span className="font-serif text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.25em] text-[#ffdea6] drop-shadow-sm whitespace-nowrap">
-                    Consecrated Bar
-                  </span>
-                  {/* Right Lotus */}
-                  <svg className="w-4 sm:w-4.5 h-4 sm:h-4.5 text-[#fdcd73] shrink-0 rotate-180" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 2C6.5 2 2 6.5 2 12c4 0 7-1.5 9-4 2 2.5 5 4 9 4 0-5.5-4.5-10-10-10zm-1 9c-1.5 1.5-3.5 2.5-6 2.8 1-2.5 3-4.5 6-5.3V11zm2 0V8.5c3 .8 5 2.8 6 5.3-2.5-.3-4.5-1.3-6-2.8z"/>
-                  </svg>
                 </div>
               </div>
 

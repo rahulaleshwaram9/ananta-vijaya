@@ -15,22 +15,22 @@ export default function Header({ cartCount = 0, wishlistCount = 0, onCartClick, 
       </div>
 
       {/* Main Navigation Bar */}
-      <div className="h-16 sm:h-20 md:h-24 lg:h-[104px] bg-surface/95 backdrop-blur-md transition-all border-b border-white/60">
-        <div className="max-w-[1600px] h-full mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between">
+      <div className="h-16 sm:h-20 md:h-22 lg:h-[96px] xl:h-[104px] bg-surface/95 backdrop-blur-md transition-all border-b border-white/60">
+        <div className="max-w-[1600px] h-full mx-auto px-3 sm:px-6 lg:px-6 xl:px-12 flex items-center justify-between">
           
           {/* 1. Left: Logo Brand Group */}
-          <div className="flex items-center min-w-0 pr-1">
-            <a href="#" className="flex items-center gap-2 sm:gap-3.5 group cursor-pointer text-left py-1 min-w-0">
+          <div className="shrink-0 flex items-center pr-2 lg:pr-4">
+            <a href="#" className="shrink-0 flex items-center gap-2 sm:gap-3 group cursor-pointer text-left py-1">
               <img
                 alt="Ananta Vijaya Logo"
-                className="h-11 sm:h-14 md:h-[76px] lg:h-[84px] w-auto object-contain shrink-0 drop-shadow-[0_4px_14px_rgba(123,88,2,0.25)] transition-transform duration-300 group-hover:scale-105"
+                className="h-11 sm:h-14 md:h-[68px] lg:h-[72px] xl:h-[84px] w-auto object-contain shrink-0 drop-shadow-[0_4px_14px_rgba(123,88,2,0.25)] transition-transform duration-300 group-hover:scale-105"
                 src={ASSETS.logo}
               />
-              <div className="flex flex-col justify-center min-w-0">
-                <span className="font-headline-sm text-[12.5px] xs:text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18.5px] font-bold text-primary tracking-[0.04em] uppercase leading-tight font-serif truncate">
+              <div className="flex flex-col justify-center shrink-0">
+                <span className="font-headline-sm text-[12.5px] xs:text-[14px] sm:text-[15.5px] md:text-[16.5px] lg:text-[17px] xl:text-[18.5px] font-bold text-primary tracking-[0.04em] uppercase leading-tight font-serif whitespace-nowrap">
                   Ananta Vijaya
                 </span>
-                <span className="font-label-sm text-[7px] sm:text-[9px] md:text-[9.5px] lg:text-[10px] text-secondary tracking-[0.16em] uppercase font-semibold mt-0.5 truncate">
+                <span className="font-italianno text-[15px] xs:text-[17px] sm:text-[18.5px] md:text-[20px] lg:text-[21px] xl:text-[24px] text-[#6B4B02] tracking-[0.02em] leading-tight font-normal mt-0.5 whitespace-nowrap select-none">
                   Nature's Trust &amp; Herbal Purity
                 </span>
               </div>
@@ -38,46 +38,46 @@ export default function Header({ cartCount = 0, wishlistCount = 0, onCartClick, 
           </div>
 
           {/* 2. Center: Desktop Nav Links (Centered with Equal Margins) */}
-          <nav className="hidden lg:flex items-center justify-center gap-7 xl:gap-9 2xl:gap-11 mx-auto whitespace-nowrap">
+          <nav className="hidden lg:flex items-center justify-center gap-2.5 xl:gap-7 2xl:gap-10 mx-auto whitespace-nowrap">
             <a
               href="#home"
-              className="text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#00271d] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]"
+              className="text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#00271d] after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]"
             >
               Home
             </a>
             <a
               href="#rituals"
-              className="text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
+              className="text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
             >
               Our Story
             </a>
             <a
               href="#collection"
-              className="text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
+              className="text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
             >
               Our Soaps
             </a>
             <a
               href="#divine-collection"
-              className="text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
+              className="text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
             >
               Divine Collection
             </a>
             <a
               href="#5-elements"
-              className="text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
+              className="text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
             >
               5 Elements
             </a>
             <a
               href="#faqs"
-              className="text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
+              className="text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
             >
               FAQ
             </a>
             <a
               href="#contact"
-              className="text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
+              className="text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative text-[#414845] hover:text-[#00271d] hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50"
             >
               Contact
             </a>

@@ -17,9 +17,9 @@ export default function Footer({ onSelectSoap }) {
               />
               <div className="flex flex-col justify-center">
                 <span className="font-headline-sm text-[20px] sm:text-[22px] text-surface tracking-wider uppercase font-serif font-bold leading-none">
-                  Ananta Vijaya Pvt. Ltd.
+                  Ananta Vijaya
                 </span>
-                <span className="font-label-sm text-[10px] sm:text-[11px] text-secondary-fixed-dim tracking-[0.16em] uppercase font-semibold mt-1">
+                <span className="font-italianno text-[22px] sm:text-[24px] md:text-[26px] text-[#fdcd73] tracking-[0.02em] leading-tight font-normal mt-0.5 select-none">
                   Nature's Trust &amp; Herbal Purity
                 </span>
               </div>

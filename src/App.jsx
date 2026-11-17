@@ -344,7 +344,7 @@ export default function App() {
           id: "divine-collection-box",
           title,
           price: "₹699",
-          image: ASSETS.kamalamBox,
+          image: ASSETS.divineBox,
           quantity: 1
         }
       ];
@@ -462,25 +462,25 @@ export default function App() {
         </div>
 
         {/* Main Navbar */}
-        <div className="h-16 sm:h-20 md:h-24 lg:h-[104px] bg-white/95 backdrop-blur-md border-b border-white transition-all relative">
-          <div className="max-w-[1600px] h-full mx-auto px-3 sm:px-6 lg:px-12 flex items-center justify-between">
+        <div className="h-16 sm:h-20 md:h-22 lg:h-[96px] xl:h-[104px] bg-white/95 backdrop-blur-md border-b border-white transition-all relative">
+          <div className="max-w-[1600px] h-full mx-auto px-3 sm:px-6 lg:px-6 xl:px-12 flex items-center justify-between">
             {/* 1. Left: Logo Group */}
-            <div className="flex items-center min-w-0 pr-1">
+            <div className="shrink-0 flex items-center pr-2 lg:pr-4">
               <button
                 onClick={() => navigateTo('home')}
-                className="flex items-center gap-2 sm:gap-3.5 group cursor-pointer text-left py-1 min-w-0"
+                className="shrink-0 flex items-center gap-2 sm:gap-3 group cursor-pointer text-left py-1"
                 type="button"
               >
                 <img
                   alt="Ananta Vijaya Sacred Logo"
-                  className="h-11 sm:h-14 md:h-[76px] lg:h-[84px] w-auto object-contain shrink-0 drop-shadow-[0_4px_14px_rgba(123,88,2,0.25)] transition-transform duration-300 group-hover:scale-105"
+                  className="h-11 sm:h-14 md:h-[68px] lg:h-[72px] xl:h-[84px] w-auto object-contain shrink-0 drop-shadow-[0_4px_14px_rgba(123,88,2,0.25)] transition-transform duration-300 group-hover:scale-105"
                   src={ASSETS.logo}
                 />
-                <div className="flex flex-col justify-center min-w-0">
-                  <span className="font-serif text-[12.5px] xs:text-[14px] sm:text-[16px] md:text-[17px] lg:text-[18.5px] font-bold text-[#00271d] tracking-[0.04em] uppercase leading-tight truncate">
+                <div className="flex flex-col justify-center shrink-0">
+                  <span className="font-serif text-[12.5px] xs:text-[14px] sm:text-[15.5px] md:text-[16.5px] lg:text-[17px] xl:text-[18.5px] font-bold text-[#00271d] tracking-[0.04em] uppercase leading-tight whitespace-nowrap">
                     Ananta Vijaya
                   </span>
-                  <span className="font-label-sm text-[7px] sm:text-[9px] md:text-[9.5px] lg:text-[10px] text-[#7B5802] tracking-[0.16em] uppercase font-semibold mt-0.5 truncate">
+                  <span className="font-italianno text-[15px] xs:text-[17px] sm:text-[18.5px] md:text-[20px] lg:text-[21px] xl:text-[24px] text-[#6B4B02] tracking-[0.02em] leading-tight font-normal mt-0.5 whitespace-nowrap select-none">
                     Nature's Trust &amp; Herbal Purity
                   </span>
                 </div>
@@ -488,10 +488,10 @@ export default function App() {
             </div>
 
             {/* 2. Center: Desktop Navigation Links (Centered with Equal Margins) */}
-            <nav className="hidden lg:flex items-center justify-center gap-7 xl:gap-9 2xl:gap-11 mx-auto whitespace-nowrap">
+            <nav className="hidden lg:flex items-center justify-center gap-2.5 xl:gap-7 2xl:gap-10 mx-auto whitespace-nowrap">
               <button
                 onClick={() => navigateTo('home')}
-                className={`text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'home'
+                className={`text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'home'
                   ? 'text-[#00271d] after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]'
                   : 'text-[#414845] hover:text-[#00271d] hover:after:content-[\'\'] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50'
                   }`}
@@ -500,7 +500,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => navigateTo('about')}
-                className={`text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'about' || currentRoute.page === 'our-story'
+                className={`text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'about' || currentRoute.page === 'our-story'
                   ? 'text-[#00271d] after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]'
                   : 'text-[#414845] hover:text-[#00271d] hover:after:content-[\'\'] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50'
                   }`}
@@ -509,7 +509,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => navigateTo('shop')}
-                className={`text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'shop' || currentRoute.page === 'our-soaps' || currentRoute.page === 'product'
+                className={`text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'shop' || currentRoute.page === 'our-soaps' || currentRoute.page === 'product'
                   ? 'text-[#00271d] after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]'
                   : 'text-[#414845] hover:text-[#00271d] hover:after:content-[\'\'] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50'
                   }`}
@@ -518,7 +518,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => navigateTo('divine-collection')}
-                className={`text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'divine-collection'
+                className={`text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'divine-collection'
                   ? 'text-[#00271d] after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]'
                   : 'text-[#414845] hover:text-[#00271d] hover:after:content-[\'\'] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50'
                   }`}
@@ -527,7 +527,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => navigateTo('5-elements')}
-                className={`text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === '5-elements' || currentRoute.page === 'ingredients'
+                className={`text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === '5-elements' || currentRoute.page === 'ingredients'
                   ? 'text-[#00271d] after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]'
                   : 'text-[#414845] hover:text-[#00271d] hover:after:content-[\'\'] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50'
                   }`}
@@ -536,7 +536,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => navigateTo('faqs')}
-                className={`text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'faqs' || currentRoute.page === 'faq'
+                className={`text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'faqs' || currentRoute.page === 'faq'
                   ? 'text-[#00271d] after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]'
                   : 'text-[#414845] hover:text-[#00271d] hover:after:content-[\'\'] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50'
                   }`}
@@ -545,7 +545,7 @@ export default function App() {
               </button>
               <button
                 onClick={() => navigateTo('contact')}
-                className={`text-[12.5px] xl:text-[13px] tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'contact'
+                className={`text-[11px] xl:text-[13px] tracking-[0.08em] xl:tracking-[0.16em] uppercase font-semibold py-2 transition-all relative ${currentRoute.page === 'contact'
                   ? 'text-[#00271d] after:content-[\'\'] after:absolute after:bottom-0 after:left-0 after:w-full after:h-[2px] after:bg-[#C59A45]'
                   : 'text-[#414845] hover:text-[#00271d] hover:after:content-[\'\'] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#C59A45]/50'
                   }`}
@@ -741,31 +741,41 @@ export default function App() {
               <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                   {/* Left Column: Editorial Headline & Copy */}
-                  <div className="lg:col-span-5 flex flex-col justify-center pr-0 lg:pr-6">
-                    {/* Eyebrow */}
-                    <div className="inline-flex items-center gap-2 mb-3">
-                      <span className="w-5 sm:w-7 h-[1px] bg-[#7B5802]"></span>
-                      <span className="font-label-sm text-[10px] sm:text-[11px] uppercase tracking-[0.22em] text-[#7B5802] font-semibold">
+                  <div className="lg:col-span-5 flex flex-col justify-center items-center lg:items-start text-center lg:text-left pr-0 lg:pr-6">
+                    {/* Eyebrow Ornament */}
+                    <div className="flex items-center justify-center lg:justify-start gap-2.5 sm:gap-3 mb-3.5 sm:mb-4 w-full">
+                      <div className="flex items-center gap-1.5 text-[#C59A45]">
+                        <span className="w-6 sm:w-10 h-[1px] bg-gradient-to-r from-transparent to-[#C59A45]"></span>
+                        <svg className="w-3 h-3 text-[#C59A45]" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
+                        </svg>
+                      </div>
+                      <span className="font-label-sm text-[11px] sm:text-[12px] uppercase tracking-[0.22em] text-[#7B5802] font-semibold text-center">
                         Natural Handmade Soaps
                       </span>
-                      <span className="w-5 sm:w-7 h-[1px] bg-[#7B5802]"></span>
+                      <div className="flex items-center gap-1.5 text-[#C59A45]">
+                        <svg className="w-3 h-3 text-[#C59A45]" viewBox="0 0 24 24" fill="currentColor">
+                          <path d="M12 0L14.5 9.5L24 12L14.5 14.5L12 24L9.5 14.5L0 12L9.5 9.5L12 0Z" />
+                        </svg>
+                        <span className="w-6 sm:w-10 h-[1px] bg-gradient-to-l from-transparent to-[#C59A45]"></span>
+                      </div>
                     </div>
 
                     {/* Big Headline */}
-                    <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-[#00271d] leading-[1.16] sm:leading-[1.12] tracking-tight mb-4">
-                      Tradition in Every Touch.<br />
-                      <span className="italic font-normal text-[#7B5802]">
+                    <h1 className="font-serif text-[28px] xs:text-[32px] sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[52px] text-[#00271d] leading-[1.2] sm:leading-[1.14] tracking-tight mb-3.5 sm:mb-4">
+                      Tradition in Every Touch.
+                      <span className="block italic font-normal text-[#9B722B] mt-1 sm:mt-1.5">
                         Thoughtful Care in Every Day.
                       </span>
                     </h1>
 
                     {/* Description */}
-                    <p className="font-sans text-sm sm:text-base lg:text-lg text-[#414845] max-w-xl mb-6 leading-relaxed">
+                    <p className="font-sans text-[13.5px] xs:text-[14.5px] sm:text-base lg:text-base xl:text-lg text-[#414845] max-w-md lg:max-w-xl mx-auto lg:mx-0 mb-5 lg:mb-6 leading-relaxed">
                       Handcrafted with ancient Ayurvedic wisdom and consecrated botanicals. Pure, gentle care for your skin and sacred rituals for your daily routine.
                     </p>
 
                     {/* CTA Buttons */}
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-3.5 mb-8 w-full sm:w-auto">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-3.5 mb-6 lg:mb-6 xl:mb-8 w-full sm:w-auto">
                       <button
                         onClick={() => navigateTo('our-soaps')}
                         className="inline-flex items-center justify-center px-7 py-3.5 sm:py-3 bg-[#173D32] text-[#FAF5EB] font-label-md text-xs uppercase tracking-widest shadow-md hover:bg-[#39251D] transition-all duration-300 group rounded-full text-center"
@@ -786,20 +796,22 @@ export default function App() {
                     </div>
 
                     {/* 3 Trust Indicators */}
-                    <div className="pt-2 flex flex-wrap items-center gap-2.5 sm:gap-4 text-[#414845] font-label-sm text-[10px] sm:text-[11px] uppercase tracking-wider">
-                      <div className="flex items-center gap-1.5 bg-white/90 sm:bg-transparent px-2.5 py-1 sm:p-0 rounded-full sm:rounded-none border border-[#E8D4B5]/60 sm:border-none shadow-sm sm:shadow-none">
-                        <span className="material-symbols-outlined text-[#7B5802] text-[15px] sm:text-[16px]">verified</span>
-                        <span className="font-semibold text-[#00271d]">Handcrafted</span>
-                      </div>
-                      <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-[#7B5802]/50"></span>
-                      <div className="flex items-center gap-1.5 bg-white/90 sm:bg-transparent px-2.5 py-1 sm:p-0 rounded-full sm:rounded-none border border-[#E8D4B5]/60 sm:border-none shadow-sm sm:shadow-none">
-                        <span className="material-symbols-outlined text-[#7B5802] text-[15px] sm:text-[16px]">spa</span>
-                        <span className="font-semibold text-[#00271d]">Devotional Pure Herbs</span>
-                      </div>
-                      <span className="hidden sm:inline-block w-1.5 h-1.5 rounded-full bg-[#7B5802]/50"></span>
-                      <div className="flex items-center gap-1.5 bg-white/90 sm:bg-transparent px-2.5 py-1 sm:p-0 rounded-full sm:rounded-none border border-[#E8D4B5]/60 sm:border-none shadow-sm sm:shadow-none">
-                        <span className="material-symbols-outlined text-[#7B5802] text-[15px] sm:text-[16px]">local_florist</span>
-                        <span className="font-semibold text-[#00271d]">Sacred Botanicals</span>
+                    <div className="pt-2 flex justify-center lg:justify-start w-full">
+                      <div className="inline-flex items-center justify-center gap-2 xs:gap-2.5 sm:gap-4 px-3 sm:px-4 py-1.5 sm:py-1 rounded-full bg-white/95 border border-[#C59A45]/40 shadow-[0_2px_12px_rgba(123,88,2,0.06)] text-[#00271d] text-[9.5px] xs:text-[10px] sm:text-[11px] uppercase tracking-wider font-semibold select-none">
+                        <div className="inline-flex items-center gap-1 sm:gap-1.5">
+                          <span className="material-symbols-outlined text-[#7B5802] text-[14px] sm:text-[16px]">verified</span>
+                          <span>Handcrafted</span>
+                        </div>
+                        <span className="w-1 h-1 rounded-full bg-[#C59A45]/60 shrink-0"></span>
+                        <div className="inline-flex items-center gap-1 sm:gap-1.5">
+                          <span className="material-symbols-outlined text-[#7B5802] text-[14px] sm:text-[16px]">spa</span>
+                          <span><span className="hidden sm:inline">Devotional </span>Pure Herbs</span>
+                        </div>
+                        <span className="w-1 h-1 rounded-full bg-[#C59A45]/60 shrink-0"></span>
+                        <div className="inline-flex items-center gap-1 sm:gap-1.5">
+                          <span className="material-symbols-outlined text-[#7B5802] text-[14px] sm:text-[16px]">local_florist</span>
+                          <span>Sacred Botanicals</span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -850,28 +862,7 @@ export default function App() {
                             <span className="font-serif text-[8px] sm:text-[9.5px] lg:text-[10px] uppercase tracking-[0.24em] text-[#7b5802] font-semibold leading-tight">The</span>
                             <span className="font-serif text-[12px] sm:text-[14.5px] lg:text-[16px] font-bold text-[#173D32] tracking-wider uppercase leading-tight my-0.5">Divine</span>
                             <span className="font-serif text-[8.5px] sm:text-[10px] lg:text-[10.5px] font-semibold text-[#7b5802] tracking-wider uppercase leading-tight">Collection</span>
-                            {/* Lotus Icon */}
-                            <svg className="w-4 h-4 text-[#C59A45] mt-0.5" viewBox="0 0 24 24" fill="currentColor">
-                              <path d="M12 3c-1.5 2.5-3 5-3 8 0 2.5 1.5 4 3 5 1.5-1 3-2.5 3-5 0-3-1.5-5.5-3-8zm-4.5 5.5C6.3 10 5 12 5 14c0 2 1.3 3.5 3 4.2-.8-1.5-1-3.2-.5-4.7.4-1.5 1.3-3.2 0-5zm9 0c-1.3 1.8-.4 3.5 0 5 .5 1.5.3 3.2-.5 4.7 1.7-.7 3-2.2 3-4.2 0-2-1.3-4-2.5-5.5z"/>
-                            </svg>
                           </div>
-                        </div>
-                      </div>
-
-                      {/* 8. "CONSECRATED BAR" Forest Green Ribbon Badge (Centered in Arch Opening) */}
-                      <div className="absolute top-[37%] left-1/2 -translate-x-1/2 z-25 pointer-events-none">
-                        <div className="inline-flex items-center gap-2 sm:gap-3 px-4.5 sm:px-6 py-1.5 sm:py-2 rounded-full bg-[#063426] border border-[#d4af37] shadow-[0_8px_20px_rgba(0,39,29,0.5)] ring-1 ring-[#fdcd73]/60 backdrop-blur-sm">
-                          {/* Left Lotus */}
-                          <svg className="w-4 sm:w-4.5 h-4 sm:h-4.5 text-[#fdcd73] shrink-0" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.5 2 2 6.5 2 12c4 0 7-1.5 9-4 2 2.5 5 4 9 4 0-5.5-4.5-10-10-10zm-1 9c-1.5 1.5-3.5 2.5-6 2.8 1-2.5 3-4.5 6-5.3V11zm2 0V8.5c3 .8 5 2.8 6 5.3-2.5-.3-4.5-1.3-6-2.8z"/>
-                          </svg>
-                          <span className="font-serif text-[11px] sm:text-[13px] font-bold uppercase tracking-[0.25em] text-[#ffdea6] drop-shadow-sm whitespace-nowrap">
-                            Consecrated Bar
-                          </span>
-                          {/* Right Lotus */}
-                          <svg className="w-4 sm:w-4.5 h-4 sm:h-4.5 text-[#fdcd73] shrink-0 rotate-180" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 2C6.5 2 2 6.5 2 12c4 0 7-1.5 9-4 2 2.5 5 4 9 4 0-5.5-4.5-10-10-10zm-1 9c-1.5 1.5-3.5 2.5-6 2.8 1-2.5 3-4.5 6-5.3V11zm2 0V8.5c3 .8 5 2.8 6 5.3-2.5-.3-4.5-1.3-6-2.8z"/>
-                          </svg>
                         </div>
                       </div>
 
@@ -1111,7 +1102,7 @@ export default function App() {
                         Pure Botanicals
                       </span>
                       <span className="text-[11px] text-[#414845]/80 mt-1">
-                        Cold-pressed plant oils
+                        Virgin plant oils
                       </span>
                     </div>
 
@@ -1161,7 +1152,7 @@ export default function App() {
                     Explore the Lotica Glow Soap Collection
                   </h2>
                   <p className="font-sans text-sm sm:text-base text-[#414845] max-w-xl">
-                    Handcrafted with divine botanicals, cold-pressed oils, and sacred herbs. Choose the perfect bar for your skin and spirit.
+                    Handcrafted with divine botanicals, virgin plant oils, and sacred herbs. Choose the perfect bar for your skin and spirit.
                   </p>
                 </div>
 
@@ -1252,17 +1243,6 @@ export default function App() {
                           shopping_bag
                         </span>
                         <span>Add to Bag</span>
-                      </button>
-
-                      <button
-                        aria-label="Add to Wishlist"
-                        onClick={() => toggleWishlist(currentSoap.title)}
-                        className="p-3 sm:p-3.5 rounded-full border border-[#E8D4B5] hover:border-[#C59A45] text-[#173D32] hover:text-[#C59A45] bg-white transition-colors flex items-center justify-center shadow-sm shrink-0"
-                        type="button"
-                      >
-                        <span className={`material-symbols-outlined text-[18px] sm:text-[20px] ${wishlist.includes(currentSoap.title) ? 'text-[#C59A45] fill-current' : ''}`}>
-                          favorite
-                        </span>
                       </button>
                     </div>
 
@@ -1448,22 +1428,46 @@ export default function App() {
                         <div className="absolute bottom-2.5 inset-x-6 sm:inset-x-10 h-5 sm:h-7 bg-gradient-to-b from-[#d9be95] to-[#bca076] rounded-[50%] shadow-[0_8px_16px_rgba(0,0,0,0.4)] z-0"></div>
                         <div className="absolute bottom-0 inset-x-10 sm:inset-x-14 h-3 bg-[#0a1814]/70 blur-md rounded-full -z-10"></div>
 
-                        {/* The 5 Soaps Display Stage */}
+                        {/* The 5 Soaps Display Stage (Sequence: Kamalam, Rudraksha, Vibhudi [Hero Center], Bilvam, Kadamba) */}
                         <div className="relative z-10 w-full flex items-end justify-center select-none pb-3 sm:pb-4">
-                          {/* 1. Kadamba Soap (Left Outer Wing) */}
+                          {/* 1. Kamalam Soap (Far Left Wing) */}
                           <div className="w-[19%] sm:w-[18.5%] flex flex-col items-center z-10 transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
                             <div className="relative w-full">
                               <img
-                                alt="Kadamba Soap Box"
+                                alt="Kamalam Soap Box"
                                 className="w-full h-auto object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover/soap:scale-105"
-                                src={ASSETS.kadambaBox}
+                                src={ASSETS.kamalamBox}
                               />
                               <div className="absolute -bottom-1 inset-x-1.5 h-3 bg-[#0a1814]/70 blur-sm rounded-full -z-10"></div>
                             </div>
                           </div>
 
-                          {/* 2. Bilvam Soap (Left Inner) */}
+                          {/* 2. Rudraksha Soap (Inner Left) */}
                           <div className="w-[21%] sm:w-[20.5%] flex flex-col items-center z-20 -ml-[2%] transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
+                            <div className="relative w-full">
+                              <img
+                                alt="Rudraksha Soap Box"
+                                className="w-full h-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover/soap:scale-105"
+                                src={ASSETS.rudrakshaBox}
+                              />
+                              <div className="absolute -bottom-1 inset-x-2 h-3.5 bg-[#0a1814]/70 blur-sm rounded-full -z-10"></div>
+                            </div>
+                          </div>
+
+                          {/* 3. Vibhudi Soap (Center Hero Crown Jewel) */}
+                          <div className="w-[28%] sm:w-[27.5%] flex flex-col items-center z-30 -ml-[2%] -mr-[2%] scale-[1.12] transition-transform duration-300 hover:-translate-y-2.5 group/soap cursor-pointer origin-bottom">
+                            <div className="relative w-full">
+                              <img
+                                alt="Vibhudi Soap Box"
+                                className="w-full h-auto object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover/soap:scale-105"
+                                src={ASSETS.vibhudiBox}
+                              />
+                              <div className="absolute -bottom-1 inset-x-2 h-4.5 bg-[#0a1814]/85 blur-md rounded-full -z-10"></div>
+                            </div>
+                          </div>
+
+                          {/* 4. Bilvam Soap (Inner Right) */}
+                          <div className="w-[21%] sm:w-[20.5%] flex flex-col items-center z-20 -mr-[2%] transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
                             <div className="relative w-full">
                               <img
                                 alt="Bilvam Soap Box"
@@ -1474,37 +1478,13 @@ export default function App() {
                             </div>
                           </div>
 
-                          {/* 3. Kamalam Soap (Center Hero Crown Jewel) */}
-                          <div className="w-[28%] sm:w-[27.5%] flex flex-col items-center z-30 -ml-[2%] -mr-[2%] scale-[1.12] transition-transform duration-300 hover:-translate-y-2.5 group/soap cursor-pointer origin-bottom">
-                            <div className="relative w-full">
-                              <img
-                                alt="Kamalam Soap Box"
-                                className="w-full h-auto object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover/soap:scale-105"
-                                src={ASSETS.kamalamBox}
-                              />
-                              <div className="absolute -bottom-1 inset-x-2 h-4.5 bg-[#0a1814]/85 blur-md rounded-full -z-10"></div>
-                            </div>
-                          </div>
-
-                          {/* 4. Vibhudi Soap (Right Inner) */}
-                          <div className="w-[21%] sm:w-[20.5%] flex flex-col items-center z-20 -mr-[2%] transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
-                            <div className="relative w-full">
-                              <img
-                                alt="Vibhudi Soap Box"
-                                className="w-full h-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover/soap:scale-105"
-                                src={ASSETS.vibhudiBox}
-                              />
-                              <div className="absolute -bottom-1 inset-x-2 h-3.5 bg-[#0a1814]/70 blur-sm rounded-full -z-10"></div>
-                            </div>
-                          </div>
-
-                          {/* 5. Rudraksha Soap (Right Outer Wing) */}
+                          {/* 5. Kadamba Soap (Far Right Wing) */}
                           <div className="w-[19%] sm:w-[18.5%] flex flex-col items-center z-10 transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
                             <div className="relative w-full">
                               <img
-                                alt="Rudraksha Soap Box"
+                                alt="Kadamba Soap Box"
                                 className="w-full h-auto object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover/soap:scale-105"
-                                src={ASSETS.rudrakshaBox}
+                                src={ASSETS.kadambaBox}
                               />
                               <div className="absolute -bottom-1 inset-x-1.5 h-3 bg-[#0a1814]/70 blur-sm rounded-full -z-10"></div>
                             </div>
@@ -1526,48 +1506,49 @@ export default function App() {
                   </div>
 
                   {/* Right Side: Editorial Narrative & Pricing CTAs */}
-                  <div className="lg:col-span-6 flex flex-col justify-center">
-                    <div className="inline-flex items-center gap-2 mb-3">
+                  <div className="lg:col-span-6 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+                    <div className="inline-flex items-center justify-center lg:justify-start gap-2 mb-3 w-full lg:w-auto">
                       <span className="w-6 h-[1px] bg-[#C59A45]"></span>
-                      <span className="font-label-sm text-xs uppercase tracking-[0.22em] text-[#ffdea6] font-semibold">
+                      <span className="font-label-sm text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#ffdea6] font-semibold">
                         Special Festive Edition
                       </span>
+                      <span className="w-6 h-[1px] bg-[#C59A45] lg:hidden"></span>
                     </div>
 
-                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#FFF8F1] mb-2">
+                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#FFF8F1] mb-1.5 [text-wrap:balance]">
                       The Divine Collection
                     </h2>
                     <p className="font-serif italic text-lg sm:text-xl text-[#fdcd73] mb-4">
                       All 5 Sacred Soaps Gift Box
                     </p>
 
-                    <p className="font-sans text-sm sm:text-base text-[#c2ebdb] max-w-lg mb-6 leading-relaxed">
+                    <p className="font-sans text-[13.5px] sm:text-base text-[#c2ebdb] max-w-lg mb-6 leading-relaxed [text-wrap:balance] mx-auto lg:mx-0">
                       Experience the complete spectrum of botanical wellness with our curated 5-bar collector’s edition. Each bar represents an ancient blessing for your skin, crafted slowly with consecrated herbs.
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
-                      <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF5EB]">
-                        <span className="material-symbols-outlined text-[#fdcd73] text-[18px]">verified</span>
-                        <span>5 Full-Sized 100g Bars</span>
+                    <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 mb-8 w-full max-w-lg mx-auto lg:mx-0 text-left">
+                      <div className="flex items-center gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-[#C59A45]/25 text-[11.5px] sm:text-xs text-[#FAF5EB] shadow-xs">
+                        <span className="material-symbols-outlined text-[#fdcd73] text-[17px] sm:text-[18px] shrink-0">verified</span>
+                        <span className="leading-tight font-medium">5 Full-Sized 100g Bars</span>
                       </div>
-                      <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF5EB]">
-                        <span className="material-symbols-outlined text-[#fdcd73] text-[18px]">redeem</span>
-                        <span>Handcrafted Gift Box</span>
+                      <div className="flex items-center gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-[#C59A45]/25 text-[11.5px] sm:text-xs text-[#FAF5EB] shadow-xs">
+                        <span className="material-symbols-outlined text-[#fdcd73] text-[17px] sm:text-[18px] shrink-0">redeem</span>
+                        <span className="leading-tight font-medium">Handcrafted Gift Box</span>
                       </div>
-                      <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF5EB]">
-                        <span className="material-symbols-outlined text-[#fdcd73] text-[18px]">spa</span>
-                        <span>Free Carved Teakwood Dish</span>
+                      <div className="flex items-center gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-[#C59A45]/25 text-[11.5px] sm:text-xs text-[#FAF5EB] shadow-xs">
+                        <span className="material-symbols-outlined text-[#fdcd73] text-[17px] sm:text-[18px] shrink-0">spa</span>
+                        <span className="leading-tight font-medium">Free Teakwood Dish</span>
                       </div>
-                      <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF5EB]">
-                        <span className="material-symbols-outlined text-[#fdcd73] text-[18px]">local_shipping</span>
-                        <span>Free Express Delivery</span>
+                      <div className="flex items-center gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-[#C59A45]/25 text-[11.5px] sm:text-xs text-[#FAF5EB] shadow-xs">
+                        <span className="material-symbols-outlined text-[#fdcd73] text-[17px] sm:text-[18px] shrink-0">local_shipping</span>
+                        <span className="leading-tight font-medium">Free Express Delivery</span>
                       </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full">
                       <button
                         onClick={addDivineBoxToCart}
-                        className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#C59A45] hover:bg-[#b08638] text-[#173D32] font-serif font-bold text-sm tracking-wider uppercase rounded-full shadow-lg hover:shadow-xl transition-all transform active:scale-95"
+                        className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#C59A45] hover:bg-[#b08638] text-[#173D32] font-serif font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg hover:shadow-xl transition-all transform active:scale-95"
                         type="button"
                       >
                         <span>Order Divine Box — ₹699</span>
@@ -1578,10 +1559,10 @@ export default function App() {
                         href="https://wa.me/917386759777?text=Hello%2C%20I%20would%20like%20to%20order%20the%20Divine%20Collection%20Gift%20Box"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border border-[#ffdea6]/60 hover:bg-[#ffdea6]/10 text-[#ffdea6] font-label-md text-xs uppercase tracking-widest rounded-full transition-colors"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border border-[#ffdea6]/50 hover:bg-[#ffdea6]/10 text-[#ffdea6] font-sans font-semibold text-xs uppercase tracking-wider rounded-full transition-colors"
                       >
-                        <span>Gift To Loved Ones</span>
-                        <span className="material-symbols-outlined text-[16px]">favorite</span>
+                        <span className="material-symbols-outlined text-[#25D366] text-[18px]">chat</span>
+                        <span>Inquire on WhatsApp</span>
                       </a>
                     </div>
                   </div>
@@ -1638,7 +1619,7 @@ export default function App() {
                       <span className="material-symbols-outlined text-[26px]">water_drop</span>
                     </div>
                     <h3 className="font-serif text-lg font-bold text-[#173D32] mb-2">
-                      Cold-Pressed Plant Oils
+                      Virgin Plant Oils
                     </h3>
                     <p className="text-xs sm:text-sm text-[#414845] leading-relaxed">
                       Enriched with unrefined coconut, sesame, castor, and almond oils that penetrate deeply to restore skin barrier health.
@@ -1750,29 +1731,36 @@ export default function App() {
                   onNavigate={(p) => navigateTo(p)}
                 />
               </div>
-              <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-12 text-center relative z-10">
-                <div className="inline-flex items-center gap-2 mb-3 px-4 py-1 rounded-full bg-white border border-[#C59A45]/30 shadow-xs">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C59A45] animate-pulse"></span>
-                  <span className="font-label-sm text-[11px] uppercase tracking-[0.2em] text-[#7B5802] font-semibold">
-                    Ananta Vijaya • Lotica Glow Heritage
+              <div className="max-w-[1000px] mx-auto px-4 sm:px-6 lg:px-12 text-center relative z-10">
+                <div className="inline-flex items-center gap-2 mb-3 px-4 py-1 rounded-full bg-[#FAF5EB] border border-[#C59A45]/30 shadow-xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C59A45]"></span>
+                  <span className="font-label-sm text-[10.5px] sm:text-[11px] uppercase tracking-[0.22em] text-[#7B5802] font-semibold">
+                    Sacred Botanical Heritage
                   </span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C59A45] animate-pulse"></span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C59A45]"></span>
                 </div>
-                <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#00271d] font-bold tracking-tight mb-3">
-                  About Ananta Vijaya | Lotica Glow Personal Care
+                <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#00271d] font-bold tracking-tight mb-3 [text-wrap:balance]">
+                  The Story of Ananta Vijaya
+                  <span className="block text-base sm:text-lg md:text-xl font-normal text-[#8C6016] italic font-serif mt-1.5">
+                    Crafted by Tradition • Rooted in Herbal Purity
+                  </span>
                 </h1>
-                <p className="font-serif italic text-base sm:text-xl text-[#7B5802] max-w-2xl mx-auto mb-2">
-                  "Bathing is not merely cleansing of the body, but purification of the spirit."
+                <p className="text-xs sm:text-sm md:text-base text-[#4a5550] max-w-2xl mx-auto leading-relaxed mb-6">
+                  Rooted in ancient Indian temple traditions, Ananta Vijaya distills sacred consecrated botanicals and traditional plant extractions into mindful daily bathing rituals for modern wellness.
                 </p>
-                <p className="text-xs sm:text-sm text-[#414845] max-w-xl mx-auto">
-                  Discover Ananta Vijaya Private Limited and Lotica Glow, a growing personal-care brand inspired by Indian tradition and nature based in Hyderabad, Telangana.
-                </p>
-                <p className="font-serif italic text-lg sm:text-2xl text-[#7B5802] max-w-2xl mx-auto mb-3">
-                  "Bathing is not merely cleansing of the body, but purification of the spirit."
-                </p>
-                <span className="font-label-sm text-xs text-[#414845] uppercase tracking-widest block">
-                  Inspired by Classical Ayurvedic Texts • Charaka Samhita
-                </span>
+
+                {/* Classical Ayurvedic Inscription Card */}
+                <div className="relative max-w-xl mx-auto p-5 sm:p-6 rounded-2xl bg-[#FAF5EB]/90 border border-[#C59A45]/35 shadow-[0_4px_20px_rgba(123,88,2,0.06)] text-center">
+                  <span className="text-[#C59A45] text-2xl font-serif block leading-none mb-1 select-none">“</span>
+                  <blockquote className="font-serif italic text-base sm:text-lg text-[#6B4B02] leading-relaxed mb-2.5 px-2">
+                    Bathing is not merely cleansing of the body, but purification of the spirit.
+                  </blockquote>
+                  <div className="flex items-center justify-center gap-2 pt-2.5 border-t border-[#C59A45]/20 text-[10px] sm:text-[11px] uppercase tracking-[0.18em] text-[#8C6016] font-semibold">
+                    <span className="w-4 h-[1px] bg-[#C59A45]/60"></span>
+                    <span>Classical Ayurvedic Wisdom • Charaka Samhita</span>
+                    <span className="w-4 h-[1px] bg-[#C59A45]/60"></span>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -1787,7 +1775,7 @@ export default function App() {
                       Chapter I • The Calling
                     </span>
                   </div>
-                  <h2 className="font-serif text-3xl sm:text-4xl text-[#173D32] font-semibold">
+                  <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#00271d] font-bold tracking-tight">
                     A Return to Consecrated Purity
                   </h2>
                   <p className="text-sm sm:text-base text-[#414845] leading-relaxed">
@@ -1844,7 +1832,7 @@ export default function App() {
                     The Patience of Cold Saponification
                   </h2>
                   <p className="text-sm sm:text-base text-[#414845] leading-relaxed">
-                    We do not use chemical accelerators or artificial hardeners. Our saponification is a living, breathing artisan craft. Virgin cold-pressed coconut oil, raw sesame oil, sweet almond oil, and unrefined kokum butters are blended at ambient room temperature.
+                    We do not use chemical accelerators or artificial hardeners. Our saponification is a living, breathing artisan craft. Pure virgin coconut oil, raw sesame oil, sweet almond oil, and unrefined kokum butters are blended at ambient room temperature.
                   </p>
                   <p className="text-sm sm:text-base text-[#414845] leading-relaxed">
                     This preserves delicate botanical flavonoids, essential fatty acids, and active herbal tannins. Each slab is hand-poured into wooden molds, cut by hand with wire cutters, and stamped with our sacred seal.
@@ -2013,17 +2001,6 @@ export default function App() {
                           shopping_bag
                         </span>
                         <span>Add to Bag</span>
-                      </button>
-
-                      <button
-                        aria-label="Add to Wishlist"
-                        onClick={() => toggleWishlist(currentSoap.title)}
-                        className="p-3.5 rounded-full border border-[#E8D4B5] hover:border-[#C59A45] text-[#173D32] hover:text-[#C59A45] bg-white transition-colors flex items-center justify-center shadow-sm"
-                        type="button"
-                      >
-                        <span className={`material-symbols-outlined text-[20px] ${wishlist.includes(currentSoap.title) ? 'text-[#C59A45] fill-current' : ''}`}>
-                          favorite
-                        </span>
                       </button>
                     </div>
 
@@ -2340,17 +2317,6 @@ export default function App() {
                         <span className="material-symbols-outlined text-[18px] transition-transform group-hover:scale-110">shopping_bag</span>
                         <span>Add to Bag</span>
                       </button>
-
-                      <button
-                        type="button"
-                        aria-label="Add to Wishlist"
-                        onClick={() => toggleWishlist(currentSoap.title)}
-                        className="w-12 h-12 rounded-full border border-[#E8D4B5] flex items-center justify-center hover:bg-[#E8D4B5]/30 transition-colors"
-                      >
-                        <span className={wishlist.includes(currentSoap.title) ? "material-symbols-outlined text-rose-600 text-[20px]" : "material-symbols-outlined text-[#173D32] text-[20px]"}>
-                          {wishlist.includes(currentSoap.title) ? 'favorite' : 'favorite_border'}
-                        </span>
-                      </button>
                     </div>
 
                     {/* 3 Key Benefits */}
@@ -2508,12 +2474,6 @@ export default function App() {
                   onNavigate={(p) => navigateTo(p)}
                 />
                 <div className="mt-3 text-center max-w-3xl mx-auto">
-                  <div className="inline-flex items-center gap-2 mb-2 px-4 py-1 rounded-full bg-white border border-[#C59A45]/30">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#C59A45] animate-pulse"></span>
-                    <span className="font-label-sm text-[11px] uppercase tracking-[0.2em] text-[#7B5802] font-semibold">
-                      Special Festive &amp; Celebration Edition • SKU: LG-GIFT-DIVINE-01
-                    </span>
-                  </div>
                   <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#00271d] font-bold leading-tight mb-2">
                     The Divine Collection – Premium Five-Soap Gift Box
                   </h1>
@@ -2548,22 +2508,46 @@ export default function App() {
                         <div className="absolute bottom-2.5 inset-x-6 sm:inset-x-10 h-5 sm:h-7 bg-gradient-to-b from-[#d9be95] to-[#bca076] rounded-[50%] shadow-[0_8px_16px_rgba(0,0,0,0.4)] z-0"></div>
                         <div className="absolute bottom-0 inset-x-10 sm:inset-x-14 h-3 bg-[#0a1814]/70 blur-md rounded-full -z-10"></div>
 
-                        {/* The 5 Soaps Display Stage */}
+                        {/* The 5 Soaps Display Stage (Sequence: Kamalam, Rudraksha, Vibhudi [Hero Center], Bilvam, Kadamba) */}
                         <div className="relative z-10 w-full flex items-end justify-center select-none pb-3 sm:pb-4">
-                          {/* 1. Kadamba Soap (Left Outer Wing) */}
+                          {/* 1. Kamalam Soap (Far Left Wing) */}
                           <div className="w-[19%] sm:w-[18.5%] flex flex-col items-center z-10 transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
                             <div className="relative w-full">
                               <img
-                                alt="Lotica Glow Kadamba Soap Box"
+                                alt="Lotica Glow Kamalam Soap Box"
                                 className="w-full h-auto object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover/soap:scale-105"
-                                src={ASSETS.kadambaBox}
+                                src={ASSETS.kamalamBox}
                               />
                               <div className="absolute -bottom-1 inset-x-1.5 h-3 bg-[#0a1814]/70 blur-sm rounded-full -z-10"></div>
                             </div>
                           </div>
 
-                          {/* 2. Bilvam Soap (Left Inner) */}
+                          {/* 2. Rudraksha Soap (Inner Left) */}
                           <div className="w-[21%] sm:w-[20.5%] flex flex-col items-center z-20 -ml-[2%] transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
+                            <div className="relative w-full">
+                              <img
+                                alt="Lotica Glow Rudraksha Soap Box"
+                                className="w-full h-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover/soap:scale-105"
+                                src={ASSETS.rudrakshaBox}
+                              />
+                              <div className="absolute -bottom-1 inset-x-2 h-3.5 bg-[#0a1814]/70 blur-sm rounded-full -z-10"></div>
+                            </div>
+                          </div>
+
+                          {/* 3. Vibhudi Soap (Center Hero Crown Jewel) */}
+                          <div className="w-[28%] sm:w-[27.5%] flex flex-col items-center z-30 -ml-[2%] -mr-[2%] scale-[1.12] transition-transform duration-300 hover:-translate-y-2.5 group/soap cursor-pointer origin-bottom">
+                            <div className="relative w-full">
+                              <img
+                                alt="Lotica Glow Vibhudi Soap Box"
+                                className="w-full h-auto object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover/soap:scale-105"
+                                src={ASSETS.vibhudiBox}
+                              />
+                              <div className="absolute -bottom-1 inset-x-2 h-4.5 bg-[#0a1814]/85 blur-md rounded-full -z-10"></div>
+                            </div>
+                          </div>
+
+                          {/* 4. Bilvam Soap (Inner Right) */}
+                          <div className="w-[21%] sm:w-[20.5%] flex flex-col items-center z-20 -mr-[2%] transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
                             <div className="relative w-full">
                               <img
                                 alt="Lotica Glow Bilvam Soap Box"
@@ -2574,37 +2558,13 @@ export default function App() {
                             </div>
                           </div>
 
-                          {/* 3. Kamalam Soap (Center Hero Crown Jewel) */}
-                          <div className="w-[28%] sm:w-[27.5%] flex flex-col items-center z-30 -ml-[2%] -mr-[2%] scale-[1.12] transition-transform duration-300 hover:-translate-y-2.5 group/soap cursor-pointer origin-bottom">
-                            <div className="relative w-full">
-                              <img
-                                alt="Lotica Glow Kamalam Soap Box"
-                                className="w-full h-auto object-contain drop-shadow-[0_24px_32px_rgba(0,0,0,0.7)] transition-transform duration-300 group-hover/soap:scale-105"
-                                src={ASSETS.kamalamBox}
-                              />
-                              <div className="absolute -bottom-1 inset-x-2 h-4.5 bg-[#0a1814]/85 blur-md rounded-full -z-10"></div>
-                            </div>
-                          </div>
-
-                          {/* 4. Vibhudi Soap (Right Inner) */}
-                          <div className="w-[21%] sm:w-[20.5%] flex flex-col items-center z-20 -mr-[2%] transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
-                            <div className="relative w-full">
-                              <img
-                                alt="Lotica Glow Vibhudi Soap Box"
-                                className="w-full h-auto object-contain drop-shadow-[0_18px_24px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover/soap:scale-105"
-                                src={ASSETS.vibhudiBox}
-                              />
-                              <div className="absolute -bottom-1 inset-x-2 h-3.5 bg-[#0a1814]/70 blur-sm rounded-full -z-10"></div>
-                            </div>
-                          </div>
-
-                          {/* 5. Rudraksha Soap (Right Outer Wing) */}
+                          {/* 5. Kadamba Soap (Far Right Wing) */}
                           <div className="w-[19%] sm:w-[18.5%] flex flex-col items-center z-10 transition-transform duration-300 hover:-translate-y-2 group/soap cursor-pointer origin-bottom">
                             <div className="relative w-full">
                               <img
-                                alt="Lotica Glow Rudraksha Soap Box"
+                                alt="Lotica Glow Kadamba Soap Box"
                                 className="w-full h-auto object-contain drop-shadow-[0_14px_18px_rgba(0,0,0,0.55)] transition-transform duration-300 group-hover/soap:scale-105"
-                                src={ASSETS.rudrakshaBox}
+                                src={ASSETS.kadambaBox}
                               />
                               <div className="absolute -bottom-1 inset-x-1.5 h-3 bg-[#0a1814]/70 blur-sm rounded-full -z-10"></div>
                             </div>
@@ -2626,48 +2586,49 @@ export default function App() {
                   </div>
 
                   {/* Right Side: Editorial Narrative & Pricing CTAs */}
-                  <div className="lg:col-span-6 flex flex-col justify-center">
-                    <div className="inline-flex items-center gap-2 mb-3">
+                  <div className="lg:col-span-6 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+                    <div className="inline-flex items-center justify-center lg:justify-start gap-2 mb-3 w-full lg:w-auto">
                       <span className="w-6 h-[1px] bg-[#C59A45]"></span>
-                      <span className="font-label-sm text-xs uppercase tracking-[0.22em] text-[#ffdea6] font-semibold">
+                      <span className="font-label-sm text-[11px] sm:text-xs uppercase tracking-[0.22em] text-[#ffdea6] font-semibold">
                         Special Festive Edition
                       </span>
+                      <span className="w-6 h-[1px] bg-[#C59A45] lg:hidden"></span>
                     </div>
 
-                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#FFF8F1] mb-2">
+                    <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#FFF8F1] mb-1.5 [text-wrap:balance]">
                       The Divine Collection
                     </h2>
                     <p className="font-serif italic text-lg sm:text-xl text-[#fdcd73] mb-4">
                       All 5 Sacred Soaps Gift Box
                     </p>
 
-                    <p className="font-sans text-sm sm:text-base text-[#c2ebdb] max-w-lg mb-6 leading-relaxed">
+                    <p className="font-sans text-[13.5px] sm:text-base text-[#c2ebdb] max-w-lg mb-6 leading-relaxed [text-wrap:balance] mx-auto lg:mx-0">
                       Experience the complete spectrum of botanical wellness with our curated 5-bar collector’s edition. Each bar represents an ancient blessing for your skin, crafted slowly with consecrated herbs.
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mb-8">
-                      <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF5EB]">
-                        <span className="material-symbols-outlined text-[#fdcd73] text-[18px]">verified</span>
-                        <span>5 Full-Sized 100g Bars</span>
+                    <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 mb-8 w-full max-w-lg mx-auto lg:mx-0 text-left">
+                      <div className="flex items-center gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-[#C59A45]/25 text-[11.5px] sm:text-xs text-[#FAF5EB] shadow-xs">
+                        <span className="material-symbols-outlined text-[#fdcd73] text-[17px] sm:text-[18px] shrink-0">verified</span>
+                        <span className="leading-tight font-medium">5 Full-Sized 100g Bars</span>
                       </div>
-                      <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF5EB]">
-                        <span className="material-symbols-outlined text-[#fdcd73] text-[18px]">redeem</span>
-                        <span>Handcrafted Gift Box</span>
+                      <div className="flex items-center gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-[#C59A45]/25 text-[11.5px] sm:text-xs text-[#FAF5EB] shadow-xs">
+                        <span className="material-symbols-outlined text-[#fdcd73] text-[17px] sm:text-[18px] shrink-0">redeem</span>
+                        <span className="leading-tight font-medium">Handcrafted Gift Box</span>
                       </div>
-                      <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF5EB]">
-                        <span className="material-symbols-outlined text-[#fdcd73] text-[18px]">spa</span>
-                        <span>Free Carved Teakwood Dish</span>
+                      <div className="flex items-center gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-[#C59A45]/25 text-[11.5px] sm:text-xs text-[#FAF5EB] shadow-xs">
+                        <span className="material-symbols-outlined text-[#fdcd73] text-[17px] sm:text-[18px] shrink-0">spa</span>
+                        <span className="leading-tight font-medium">Free Teakwood Dish</span>
                       </div>
-                      <div className="flex items-center gap-2.5 text-xs sm:text-sm text-[#FAF5EB]">
-                        <span className="material-symbols-outlined text-[#fdcd73] text-[18px]">local_shipping</span>
-                        <span>Free Express Delivery</span>
+                      <div className="flex items-center gap-2 sm:gap-2.5 p-2.5 sm:p-3 rounded-xl bg-white/[0.04] border border-[#C59A45]/25 text-[11.5px] sm:text-xs text-[#FAF5EB] shadow-xs">
+                        <span className="material-symbols-outlined text-[#fdcd73] text-[17px] sm:text-[18px] shrink-0">local_shipping</span>
+                        <span className="leading-tight font-medium">Free Express Delivery</span>
                       </div>
                     </div>
 
-                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-3 sm:gap-4 w-full">
                       <button
                         onClick={addDivineBoxToCart}
-                        className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#C59A45] hover:bg-[#b08638] text-[#173D32] font-serif font-bold text-sm tracking-wider uppercase rounded-full shadow-lg hover:shadow-xl transition-all transform active:scale-95"
+                        className="inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-[#C59A45] hover:bg-[#b08638] text-[#173D32] font-serif font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-lg hover:shadow-xl transition-all transform active:scale-95"
                         type="button"
                       >
                         <span>Order Divine Box — ₹699</span>
@@ -2679,7 +2640,7 @@ export default function App() {
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => trackWhatsAppClick('Divine Collection Page')}
-                        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border border-[#ffdea6]/60 hover:bg-[#ffdea6]/10 text-[#ffdea6] font-label-md text-xs uppercase tracking-widest rounded-full transition-colors"
+                        className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-transparent border border-[#ffdea6]/50 hover:bg-[#ffdea6]/10 text-[#ffdea6] font-sans font-semibold text-xs uppercase tracking-wider rounded-full transition-colors"
                       >
                         <span className="material-symbols-outlined text-[#25D366] text-[18px]">chat</span>
                         <span>Inquire on WhatsApp</span>
@@ -2739,67 +2700,60 @@ export default function App() {
               </div>
             </div>
 
-            {/* Coming Soon Hero Card - Pure White */}
+            {/* Coming Soon Hero Card */}
             <div className="max-w-[850px] mx-auto px-4 sm:px-6">
-              <div className="relative rounded-3xl bg-white border border-[#E8D4B5] p-8 sm:p-14 lg:p-16 text-center shadow-[0_12px_36px_rgba(57,37,29,0.05)] overflow-hidden">
-                {/* Subtle Amber Glow */}
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#C59A45]/8 blur-3xl rounded-full pointer-events-none"></div>
+              <div className="relative rounded-3xl bg-gradient-to-b from-[#FAF5EB]/90 via-white to-[#FAF5EB]/90 border border-[#C59A45]/35 p-6 sm:p-12 lg:p-14 text-center shadow-[0_12px_36px_rgba(123,88,2,0.08)] overflow-hidden">
+                {/* Subtle Amber Glow & Mandala Watermark */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-80 h-80 bg-[#C59A45]/12 blur-3xl rounded-full pointer-events-none"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[420px] h-[420px] pointer-events-none opacity-[0.04] select-none">
+                  <img alt="Mandala Aura" className="w-full h-full object-contain animate-slow-spin" src={ASSETS.lotusMandala} />
+                </div>
 
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#173D32]/8 border border-[#C59A45]/40 text-[#7B5802] text-[11px] font-bold tracking-[0.25em] uppercase mb-6">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#C59A45] animate-pulse"></span>
-                  Sacred Formulations • Coming Soon
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#C59A45]/40 text-[#7B5802] text-[10.5px] sm:text-[11px] font-bold tracking-[0.16em] uppercase mb-5 shadow-xs relative z-10">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C59A45]"></span>
+                  <span>Pancha Mahabhuta • Coming Soon</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#C59A45]"></span>
                 </div>
 
                 {/* Main Heading */}
-                <h1 className="font-serif text-3xl sm:text-5xl lg:text-6xl text-[#00271d] font-bold tracking-tight mb-4 leading-tight">
-                  Coming Soon
+                <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#00271d] font-bold tracking-tight mb-2 leading-tight relative z-10">
+                  The Five Sacred Elements
                 </h1>
 
                 {/* Subtitle */}
-                <p className="font-serif italic text-lg sm:text-2xl text-[#7B5802] mb-4">
-                  The Five Sacred Elements
+                <p className="font-serif italic text-base sm:text-xl text-[#8C6016] mb-3 relative z-10">
+                  Harmonized in Every Bar of Ananta Vijaya
                 </p>
-                <p className="font-sans text-xs sm:text-sm text-[#414845] max-w-lg mx-auto leading-relaxed mb-10">
-                  We are preparing a transcendent Ayurvedic deep-dive into the five cosmic forces — Earth, Water, Fire, Air, and Space — harmonized in every bar of Lotica Glow soap.
+                <p className="font-sans text-xs sm:text-sm text-[#4a5550] max-w-lg mx-auto leading-relaxed mb-8 relative z-10">
+                  We are preparing an Ayurvedic journey through the five primordial cosmic forces — Earth, Water, Fire, Air, and Space — each carefully embodied in our handcrafted sacred soap formulations.
                 </p>
 
-                {/* 5 Elements Badges - Pure White Background */}
-                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 max-w-2xl mx-auto mb-10">
+                {/* 5 Elements Grid - Balanced on Mobile with Space Centered */}
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-3.5 max-w-2xl mx-auto relative z-10">
                   {[
-                    { en: "Earth", sk: "Prithvi", icon: "landscape" },
-                    { en: "Water", sk: "Jal", icon: "water_drop" },
-                    { en: "Fire", sk: "Agni", icon: "local_fire_department" },
-                    { en: "Air", sk: "Vayu", icon: "air" },
-                    { en: "Space", sk: "Akasha", icon: "all_inclusive" }
+                    { en: "Earth", sk: "Prithvi", soap: "Kamalam Soap", icon: "landscape" },
+                    { en: "Water", sk: "Jal", soap: "Bilvam Soap", icon: "water_drop" },
+                    { en: "Fire", sk: "Agni", soap: "Kadamba Soap", icon: "local_fire_department" },
+                    { en: "Air", sk: "Vayu", soap: "Rudraksha Soap", icon: "air" },
+                    { en: "Space", sk: "Akasha", soap: "Vibhudi Soap", icon: "all_inclusive", isCenter: true }
                   ].map((el, idx) => (
                     <div
                       key={idx}
-                      className="flex flex-col items-center justify-center p-3.5 rounded-2xl bg-white border border-[#E8D4B5] shadow-xs"
+                      className={`flex flex-col items-center justify-center p-3.5 sm:p-4 rounded-2xl bg-white/95 border border-[#E8D4B5] hover:border-[#C59A45] shadow-xs hover:shadow-md transition-all duration-300 group ${
+                        el.isCenter ? 'col-span-2 sm:col-span-1 max-w-[280px] sm:max-w-none mx-auto w-full' : ''
+                      }`}
                     >
-                      <span className="material-symbols-outlined text-[#7B5802] text-2xl mb-1">{el.icon}</span>
-                      <span className="font-serif font-bold text-xs text-[#00271d]">{el.en}</span>
-                      <span className="font-sans text-[10px] text-[#7B5802] font-medium tracking-wider uppercase mt-0.5">{el.sk}</span>
+                      <div className="w-10 h-10 rounded-full bg-[#FAF5EB] border border-[#C59A45]/30 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform">
+                        <span className="material-symbols-outlined text-[#7B5802] text-xl">{el.icon}</span>
+                      </div>
+                      <span className="font-serif font-bold text-sm text-[#00271d]">{el.en}</span>
+                      <span className="font-sans text-[10px] text-[#7B5802] font-semibold tracking-wider uppercase mt-0.5">{el.sk}</span>
+                      <span className="text-[10px] text-[#414845]/75 font-medium mt-1.5 pt-1.5 border-t border-[#E8D4B5]/60 w-full text-center">
+                        {el.soap}
+                      </span>
                     </div>
                   ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="flex flex-wrap items-center justify-center gap-4">
-                  <button
-                    type="button"
-                    onClick={() => navigateTo('shop')}
-                    className="px-8 py-3.5 bg-[#173D32] hover:bg-[#00271d] text-[#ffdea6] font-serif font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full shadow-md transition-all hover:scale-105"
-                  >
-                    Explore Our Soaps
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => navigateTo('divine-collection')}
-                    className="px-8 py-3.5 bg-transparent border border-[#C59A45] hover:bg-[#C59A45]/15 text-[#173D32] font-serif font-bold text-xs sm:text-sm tracking-wider uppercase rounded-full transition-all"
-                  >
-                    View Divine Collection
-                  </button>
                 </div>
               </div>
             </div>
@@ -3084,23 +3038,23 @@ export default function App() {
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 pb-12 border-b border-[#C59A45]/20">
             {/* Column 1: Brand Info */}
-            <div className="lg:col-span-4 flex flex-col gap-4">
-              <div className="flex items-center gap-4">
+            <div className="lg:col-span-4 flex flex-col gap-4 pb-6 lg:pb-0 border-b border-[#C59A45]/15 lg:border-b-0">
+              <div className="flex items-center gap-3.5 sm:gap-4">
                 <img
                   alt="Ananta Vijaya Sacred Logo"
-                  className="h-20 sm:h-24 md:h-[104px] w-auto object-contain shrink-0 drop-shadow-[0_4px_16px_rgba(0,0,0,0.4)]"
+                  className="h-14 sm:h-16 md:h-20 w-auto object-contain shrink-0 drop-shadow-[0_4px_16px_rgba(0,0,0,0.4)]"
                   src={ASSETS.logo}
                 />
                 <div className="flex flex-col">
-                  <span className="font-serif text-xl sm:text-2xl font-bold uppercase tracking-wider text-white">
-                    Ananta Vijaya Pvt. Ltd.
+                  <span className="font-serif text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wider text-white">
+                    Ananta Vijaya
                   </span>
-                  <span className="font-label-sm text-[10px] sm:text-[11px] text-[#ffdea6] tracking-[0.18em] uppercase font-semibold">
+                  <span className="font-italianno text-[22px] sm:text-[24px] md:text-[26px] text-[#fdcd73] tracking-[0.02em] leading-tight font-normal select-none">
                     Nature's Trust &amp; Herbal Purity
                   </span>
                 </div>
               </div>
-              <p className="font-sans text-xs sm:text-sm text-[#a7cfc0] leading-relaxed max-w-sm">
+              <p className="font-sans text-[13px] sm:text-sm text-[#c2ebdb] leading-relaxed max-w-sm">
                 Honoring ancient Indian heritage through pure, handcrafted Ayurvedic soaps and mindful daily rituals. Made in small batches using traditional plant extraction methods.
               </p>
               <div className="flex items-center gap-3 text-[#ffdea6] pt-1">
@@ -3109,7 +3063,7 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
-                  className="w-9 h-9 rounded-full bg-white/5 border border-[#C59A45]/30 flex items-center justify-center hover:bg-[#C59A45] hover:text-[#00271d] hover:border-[#C59A45] transition-all duration-300 shadow-sm"
+                  className="w-9 h-9 rounded-full bg-white/5 border border-[#C59A45]/40 text-[#fdcd73] flex items-center justify-center hover:bg-[#C59A45] hover:text-[#00271d] hover:border-[#C59A45] transition-all duration-300 shadow-sm"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
@@ -3120,7 +3074,7 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Facebook"
-                  className="w-9 h-9 rounded-full bg-white/5 border border-[#C59A45]/30 flex items-center justify-center hover:bg-[#C59A45] hover:text-[#00271d] hover:border-[#C59A45] transition-all duration-300 shadow-sm"
+                  className="w-9 h-9 rounded-full bg-white/5 border border-[#C59A45]/40 text-[#fdcd73] flex items-center justify-center hover:bg-[#C59A45] hover:text-[#00271d] hover:border-[#C59A45] transition-all duration-300 shadow-sm"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
@@ -3131,7 +3085,7 @@ export default function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="YouTube"
-                  className="w-9 h-9 rounded-full bg-white/5 border border-[#C59A45]/30 flex items-center justify-center hover:bg-[#C59A45] hover:text-[#00271d] hover:border-[#C59A45] transition-all duration-300 shadow-sm"
+                  className="w-9 h-9 rounded-full bg-white/5 border border-[#C59A45]/40 text-[#fdcd73] flex items-center justify-center hover:bg-[#C59A45] hover:text-[#00271d] hover:border-[#C59A45] transition-all duration-300 shadow-sm"
                 >
                   <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
@@ -3140,93 +3094,104 @@ export default function App() {
               </div>
             </div>
 
-            {/* Column 2: Quick Links */}
-            <div className="lg:col-span-2 flex flex-col gap-3">
-              <h4 className="font-serif text-sm font-semibold uppercase tracking-wider text-[#ffdea6]">
-                Quick Links
-              </h4>
-              <ul className="flex flex-col gap-2 text-xs text-[#a7cfc0]">
-                <li><button type="button" onClick={() => navigateTo('home')} className="hover:text-white transition-colors text-left">Home</button></li>
-                <li><button type="button" onClick={() => navigateTo('about')} className="hover:text-white transition-colors text-left">Our Story</button></li>
-                <li><button type="button" onClick={() => navigateTo('shop')} className="hover:text-white transition-colors text-left">Our Soaps</button></li>
-                <li><button type="button" onClick={() => navigateTo('divine-collection')} className="hover:text-white transition-colors text-left">The Divine Collection</button></li>
-                <li><button type="button" onClick={() => navigateTo('5-elements')} className="hover:text-white transition-colors text-left">5 Elements</button></li>
-                <li><button type="button" onClick={() => navigateTo('faqs')} className="hover:text-white transition-colors text-left">FAQ</button></li>
-                <li><button type="button" onClick={() => navigateTo('contact')} className="hover:text-white transition-colors text-left">Contact</button></li>
-              </ul>
-            </div>
+            {/* Link Columns: 2 Columns on Mobile, unwrapped into 12-col grid on Desktop */}
+            <div className="grid grid-cols-2 gap-6 sm:gap-8 lg:contents">
+              {/* Column 2: Quick Links */}
+              <div className="lg:col-span-2 flex flex-col gap-3">
+                <h4 className="font-serif text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#fdcd73] pb-1.5 border-b border-[#C59A45]/30 w-fit">
+                  Quick Links
+                </h4>
+                <ul className="flex flex-col gap-2.5 text-xs sm:text-[13px]">
+                  <li><button type="button" onClick={() => navigateTo('home')} className="text-[#FAF5EB]/85 hover:text-[#fdcd73] hover:translate-x-1 transition-all text-left block">Home</button></li>
+                  <li><button type="button" onClick={() => navigateTo('about')} className="text-[#FAF5EB]/85 hover:text-[#fdcd73] hover:translate-x-1 transition-all text-left block">Our Story</button></li>
+                  <li><button type="button" onClick={() => navigateTo('shop')} className="text-[#FAF5EB]/85 hover:text-[#fdcd73] hover:translate-x-1 transition-all text-left block">Our Soaps</button></li>
+                  <li><button type="button" onClick={() => navigateTo('divine-collection')} className="text-[#FAF5EB]/85 hover:text-[#fdcd73] hover:translate-x-1 transition-all text-left block">Divine Collection</button></li>
+                  <li><button type="button" onClick={() => navigateTo('5-elements')} className="text-[#FAF5EB]/85 hover:text-[#fdcd73] hover:translate-x-1 transition-all text-left block">5 Elements</button></li>
+                  <li><button type="button" onClick={() => navigateTo('faqs')} className="text-[#FAF5EB]/85 hover:text-[#fdcd73] hover:translate-x-1 transition-all text-left block">FAQ</button></li>
+                  <li><button type="button" onClick={() => navigateTo('contact')} className="text-[#FAF5EB]/85 hover:text-[#fdcd73] hover:translate-x-1 transition-all text-left block">Contact</button></li>
+                </ul>
+              </div>
 
-            {/* Column 3: The Soaps */}
-            <div className="lg:col-span-3 flex flex-col gap-3">
-              <h4 className="font-serif text-sm font-semibold uppercase tracking-wider text-[#ffdea6]">
-                Our Soaps
-              </h4>
-              <ul className="flex flex-col gap-2 text-xs text-[#a7cfc0]">
-                {SOAP_PRODUCTS.map((s) => (
-                  <li key={s.id}>
+              {/* Column 3: The Soaps */}
+              <div className="lg:col-span-3 flex flex-col gap-3">
+                <h4 className="font-serif text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#fdcd73] pb-1.5 border-b border-[#C59A45]/30 w-fit">
+                  Our Soaps
+                </h4>
+                <ul className="flex flex-col gap-2.5 text-xs sm:text-[13px]">
+                  {SOAP_PRODUCTS.map((s) => (
+                    <li key={s.id}>
+                      <button
+                        type="button"
+                        onClick={() => navigateTo('product', s.slug)}
+                        className="text-[#FAF5EB]/85 hover:text-[#fdcd73] hover:translate-x-1 transition-all text-left block"
+                      >
+                        {s.title}
+                      </button>
+                    </li>
+                  ))}
+                  <li>
                     <button
                       type="button"
-                      onClick={() => navigateTo('product', s.slug)}
-                      className="hover:text-white transition-colors text-left"
+                      onClick={() => navigateTo('divine-collection')}
+                      className="text-[#fdcd73] hover:text-white transition-colors text-left font-semibold inline-flex items-center gap-1.5 pt-0.5"
                     >
-                      {s.title} ({s.subtitle.split('&')[0].trim()})
+                      <span>Divine Gift Box</span>
+                      <span className="text-[9.5px] uppercase tracking-wider px-1.5 py-0.5 bg-[#C59A45]/25 border border-[#C59A45]/40 rounded text-[#fdcd73] font-bold">5-Soap</span>
                     </button>
                   </li>
-                ))}
-                <li>
-                  <button
-                    type="button"
-                    onClick={() => navigateTo('divine-collection')}
-                    className="hover:text-[#fdcd73] transition-colors text-left font-semibold text-[#ffdea6]"
-                  >
-                    The Divine Collection (5-Soap Box)
-                  </button>
-                </li>
-              </ul>
+                </ul>
+              </div>
             </div>
 
             {/* Column 4: Sourcing & Contact */}
-            <div className="lg:col-span-3 flex flex-col gap-3">
-              <h4 className="font-serif text-sm font-semibold uppercase tracking-wider text-[#ffdea6]">
+            <div className="lg:col-span-3 flex flex-col gap-3 pt-6 lg:pt-0 border-t border-[#C59A45]/20 lg:border-t-0">
+              <h4 className="font-serif text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#fdcd73] pb-1.5 border-b border-[#C59A45]/30 w-fit">
                 Apothecary Atelier
               </h4>
-              <div className="flex flex-col gap-2 text-xs text-[#a7cfc0]">
-                <p>Plot No. 42, Jubilee Enclave, HITEC City</p>
-                <p>Hyderabad, Telangana 500081, India</p>
-                <p className="text-[#ffdea6] pt-1">info@anantavijaya.com</p>
-                <p>+91 73867 59777</p>
+              <div className="bg-white/[0.03] border border-[#C59A45]/20 rounded-xl p-4 sm:p-5 flex flex-col gap-3 text-xs sm:text-[13px] text-[#FAF5EB]/80 backdrop-blur-sm shadow-sm">
+                <div className="flex items-start gap-2.5">
+                  <span className="material-symbols-outlined text-[18px] text-[#fdcd73] shrink-0 mt-0.5">location_on</span>
+                  <p className="leading-relaxed">
+                    Plot No. 42, Jubilee Enclave, HITEC City,<br />
+                    <span className="text-[#FAF5EB]/60">Hyderabad, Telangana 500081</span>
+                  </p>
+                </div>
+                <div className="flex items-center gap-2.5 pt-1 border-t border-white/5">
+                  <span className="material-symbols-outlined text-[17px] text-[#fdcd73] shrink-0">mail</span>
+                  <a href="mailto:info@anantavijaya.com" className="text-[#fdcd73] hover:underline font-medium">info@anantavijaya.com</a>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <span className="material-symbols-outlined text-[17px] text-[#fdcd73] shrink-0">call</span>
+                  <span>+91 73867 59777</span>
+                </div>
                 <a
                   href="https://wa.me/917386759777?text=Hello%20Ananta%20Vijaya"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-[#25D366] hover:underline mt-1 font-semibold"
+                  className="mt-1 inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-lg bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/40 text-[#25D366] font-semibold text-xs transition-colors shadow-sm"
                 >
                   <span className="material-symbols-outlined text-[16px]">chat</span>
-                  <span>WhatsApp Support</span>
+                  <span>WhatsApp Concierge</span>
                 </a>
               </div>
             </div>
           </div>
 
           {/* Bottom Legal / Copyright */}
-          <div className="mt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#a7cfc0]/80 gap-3">
-            <p>© 2026 Ananta Vijaya Private Limited – Lotica Glow. All rights reserved. Hyderabad, Telangana, India.</p>
-            <div className="flex items-center gap-4 text-xs">
-              <button type="button" onClick={() => navigateTo('home')} className="hover:text-white transition-colors">Privacy Policy</button>
-              <span>•</span>
-              <button type="button" onClick={() => navigateTo('home')} className="hover:text-white transition-colors">Terms of Ritual</button>
-              <span>•</span>
-              <button type="button" onClick={() => navigateTo('contact')} className="hover:text-white transition-colors">Shipping &amp; Care</button>
-              <span>•</span>
-              <button
-                type="button"
-                onClick={handleOpenPortal}
-                className="hover:text-[#fdcd73] transition-colors font-semibold"
-                title="Super Admin • Manager • User"
-              >
-                🔐 Staff &amp; Roles Portal ({currentUser ? ROLE_LABELS[currentUser.role] : 'Sign In'})
-              </button>
+          <div className="mt-8 pt-6 border-t border-[#C59A45]/15 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+            {/* Legal Links */}
+            <div className="flex flex-wrap items-center justify-center gap-x-4 sm:gap-x-5 gap-y-2 text-[11.5px] sm:text-xs text-[#FAF5EB]/75 order-1 md:order-2">
+              <button type="button" onClick={() => navigateTo('home')} className="hover:text-[#fdcd73] transition-colors">Privacy Policy</button>
+              <span className="text-[#C59A45]/40 select-none">•</span>
+              <button type="button" onClick={() => navigateTo('home')} className="hover:text-[#fdcd73] transition-colors">Terms of Ritual</button>
+              <span className="text-[#C59A45]/40 select-none">•</span>
+              <button type="button" onClick={() => navigateTo('contact')} className="hover:text-[#fdcd73] transition-colors">Shipping &amp; Care</button>
             </div>
+
+            {/* Copyright */}
+            <p className="text-[11px] sm:text-xs text-[#FAF5EB]/50 order-2 md:order-1 tracking-wide">
+              © 2026 Ananta Vijaya Private Limited – Lotica Glow. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>

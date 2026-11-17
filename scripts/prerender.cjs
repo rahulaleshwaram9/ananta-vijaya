@@ -429,7 +429,7 @@ const ROUTES_DATA = [
               "name": "Are your soaps suitable for all skin types, including sensitive skin?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Yes, absolutely. Our soaps are formulated with pure cold-pressed oils, unrefined plant butters, and gentle botanical extracts. They contain zero synthetic fragrances, parabens, or harsh detergents like SLS, making them exceptionally mild and soothing even for delicate and easily irritated skin."
+                "text": "Yes, absolutely. Our soaps are formulated with pure virgin plant oils, unrefined plant butters, and gentle botanical extracts. They contain zero synthetic fragrances, parabens, or harsh detergents like SLS, making them exceptionally mild and soothing even for delicate and easily irritated skin."
               }
             },
             {
@@ -445,7 +445,7 @@ const ROUTES_DATA = [
               "name": "How long does a single 100g bar typically last?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "With daily bathing by an individual, one 100g bar generally lasts between 3 to 4 weeks. Because our bars are rich in natural glycerin and cold-pressed oils, we recommend keeping your bar in a well-draining wooden soap dish away from standing water between uses to maximize its longevity."
+                "text": "With daily bathing by an individual, one 100g bar generally lasts between 3 to 4 weeks. Because our bars are rich in natural glycerin and pure plant oils, we recommend keeping your bar in a well-draining wooden soap dish away from standing water between uses to maximize its longevity."
               }
             },
             {

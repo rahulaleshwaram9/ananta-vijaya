@@ -209,13 +209,19 @@ export default function Soap3DViewer({
     handleResize();
 
     // INTERACTION HELPERS
-    const scheduleAutoResume = () => {
-      if (!userWantsSpin) return;
+    const scheduleAutoResume = (delay = 5000) => {
       if (idleTimer) clearTimeout(idleTimer);
       idleTimer = setTimeout(() => {
+        // Smoothly ease box back to its original position & orientation
+        const twoPi = Math.PI * 2;
+        const turns = Math.round((targetY - DEFAULT_ROT_Y) / twoPi);
+        targetY = DEFAULT_ROT_Y + turns * twoPi;
+        targetX = DEFAULT_ROT_X;
+        zoom = DEFAULT_ZOOM;
+        userWantsSpin = true;
         rotating = true;
         setIsRotating(true);
-      }, 3500);
+      }, delay);
     };
 
     controlsRef.current.reset = () => {
@@ -232,7 +238,12 @@ export default function Soap3DViewer({
       userWantsSpin = !userWantsSpin;
       rotating = userWantsSpin;
       setIsRotating(userWantsSpin);
-      if (!rotating && idleTimer) clearTimeout(idleTimer);
+      if (!rotating) {
+        // If user paused, automatically restore upright showcase angle & resume spin after 5s of idle
+        scheduleAutoResume(5000);
+      } else {
+        if (idleTimer) clearTimeout(idleTimer);
+      }
     };
 
     // POINTER EVENTS
@@ -252,7 +263,8 @@ export default function Soap3DViewer({
       const dx = e.clientX - lastX;
       const dy = e.clientY - lastY;
       targetY += dx * 0.008;
-      targetX += dy * 0.008;
+      // Allow full inspection of top/bottom while preventing complete inverted flip
+      targetX = Math.max(-1.15, Math.min(1.15, targetX + dy * 0.008));
       lastX = e.clientX;
       lastY = e.clientY;
     };
@@ -260,14 +272,14 @@ export default function Soap3DViewer({
     const onPointerUp = () => {
       if (dragging) {
         dragging = false;
-        scheduleAutoResume();
+        scheduleAutoResume(5000);
       }
     };
 
     const onPointerCancel = () => {
       if (dragging) {
         dragging = false;
-        scheduleAutoResume();
+        scheduleAutoResume(5000);
       }
     };
 
@@ -278,7 +290,7 @@ export default function Soap3DViewer({
       e.preventDefault();
       setHasInteracted(true);
       zoom = Math.max(minZoom, Math.min(maxZoom, zoom + e.deltaY * 0.015));
-      scheduleAutoResume();
+      scheduleAutoResume(5000);
     };
 
     // TOUCH PINCH ZOOM
@@ -298,6 +310,7 @@ export default function Soap3DViewer({
 
     const onTouchEnd = () => {
       initialPinchDistance = 0;
+      scheduleAutoResume(5000);
     };
 
     mount.addEventListener('pointerdown', onPointerDown);
@@ -380,6 +393,9 @@ export default function Soap3DViewer({
       }
     });
     setIsLoaded(true);
+    if (controlsRef.current?.reset) {
+      controlsRef.current.reset();
+    }
   }, [textures]);
 
   return (

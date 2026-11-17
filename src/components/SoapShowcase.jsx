@@ -127,21 +127,6 @@ export default function SoapShowcase({ selectedIndex, onSelectSoap, onAddToCart,
                 </span>
                 <span>Add to Cart</span>
               </button>
-              
-              <button
-                type="button"
-                aria-label="Add to Wishlist"
-                onClick={() => onToggleWishlist?.(current.id)}
-                className={`p-3.5 rounded-full border transition-colors flex items-center justify-center shadow-sm ${
-                  isWishlisted?.(current.id)
-                    ? 'border-[#C59A45] bg-[#C59A45]/10 text-[#C59A45]'
-                    : 'border-[#E8D4B5] hover:border-[#C59A45] text-[#173D32] hover:text-[#C59A45] bg-surface'
-                }`}
-              >
-                <span className={`material-symbols-outlined text-[20px] ${isWishlisted?.(current.id) ? 'fill-current' : ''}`}>
-                  favorite
-                </span>
-              </button>
             </div>
 
           </div>
@@ -306,7 +291,7 @@ export default function SoapShowcase({ selectedIndex, onSelectSoap, onAddToCart,
                 Conscious Botanical Craft
               </h4>
               <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Cold-pressed sesame, virgin coconut, and pure unadulterated botanical elixirs.
+                Pure sesame, virgin coconut, and unadulterated botanical elixirs.
               </p>
             </div>
           </div>

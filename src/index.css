@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Edwardian Script ITC';
+  src: local('Edwardian Script ITC'),
+       local('EdwardianScriptITC'),
+       url('/fonts/EdwardianScriptITC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-italianno {
+  font-family: 'Italianno', cursive, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+.font-formal,
+.font-edwardian {
+  font-family: 'Cinzel', 'Cormorant Garamond', 'Playfair Display', serif;
+  letter-spacing: 0.22em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
 html {
   margin: 0;
   padding: 0;

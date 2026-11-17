@@ -17,6 +17,7 @@ import rudrakshaMalaImg from '../assets/images/rudraksha_mala.png';
 import sanctuaryRitualImg from '../assets/images/sanctuary_ritual.png';
 import bilvaFruitImg from '../assets/images/bilva_fruit.png';
 import kadambaFlowerImg from '../assets/images/kadamba_flower.png';
+import divineCollectionImg from '../assets/images/divine_collection_gift_box.jpg';
 
 // 3D Packaging Textures
 import kamalamFront from '../assets/textures/kamalam/front.jpg';
@@ -98,7 +99,7 @@ export const SOAP_PRODUCTS = [
       { name: "Consecrated Temple Ash", role: "Mineral Micro-Exfoliation", icon: "temple_hindu" },
       { name: "Krishna Tulsi Extract", role: "Anti-Pollution Purification", icon: "eco" },
       { name: "Activated Coconut Charcoal", role: "Draws Out Deep Toxins", icon: "dark_mode" },
-      { name: "Cold-Pressed Sesame Oil", role: "Skin Barrier Balancing", icon: "water_drop" },
+      { name: "Pure Virgin Sesame Oil", role: "Skin Barrier Balancing", icon: "water_drop" },
       { name: "Frankincense Resin Oil", role: "Cellular Renewal & Serenity", icon: "flare" },
       { name: "Myrrh & Clove Infusion", role: "Soothes Sensitive Skin", icon: "spa" }
     ]
@@ -146,7 +147,7 @@ export const SOAP_PRODUCTS = [
       { name: "Panchamukhi Rudraksha Extract", role: "Bio-Magnetic Vitality", icon: "all_inclusive" },
       { name: "Himalayan Deodar Cedar", role: "Skin Firming & Tone", icon: "forest" },
       { name: "Pure Jojoba Golden Oil", role: "Mimics Natural Sebum", icon: "water_drop" },
-      { name: "Cold-Pressed Castor Oil", role: "Velvety Cushioning Lather", icon: "spa" },
+      { name: "Pure Castor Oil", role: "Velvety Cushioning Lather", icon: "spa" },
       { name: "Ashwagandha Root Extract", role: "Adaptogenic Skin Defense", icon: "eco" },
       { name: "Black Pepper & Clove Leaf", role: "Micro-Circulation Warmth", icon: "local_fire_department" }
     ]
@@ -177,7 +178,7 @@ export const SOAP_PRODUCTS = [
       {
         icon: "spa",
         title: "100% Consecrated Botanicals",
-        desc: "Wild bael leaves hand-collected and cold-infused in virgin coconut oil."
+        desc: "Wild bael leaves hand-collected and purely infused in virgin coconut oil."
       },
       {
         icon: "clean_hands",
@@ -192,7 +193,7 @@ export const SOAP_PRODUCTS = [
     ],
     ingredients: [
       { name: "Sacred Bilva Patra", role: "Antimicrobial & Rejuvenating", icon: "eco" },
-      { name: "Cold-Pressed Neem Oil", role: "Clarifying & Detoxifying", icon: "spa" },
+      { name: "Pure Virgin Neem Oil", role: "Clarifying & Detoxifying", icon: "spa" },
       { name: "Vetiver (Khus) Root", role: "Deep Earthy Cooling", icon: "grass" },
       { name: "Castor Seed Oil", role: "Rich Luxurious Lather", icon: "water_drop" },
       { name: "Tulsi (Holy Basil)", role: "Purifying & Shielding", icon: "local_florist" },
@@ -230,7 +231,7 @@ export const SOAP_PRODUCTS = [
       {
         icon: "water_drop",
         title: "Deep Long-Lasting Moisture",
-        desc: "Cold-pressed coconut and almond oils prevent dryness all day."
+        desc: "Pure virgin coconut and almond oils prevent dryness all day."
       },
       {
         icon: "local_florist",
@@ -241,7 +242,7 @@ export const SOAP_PRODUCTS = [
     ingredients: [
       { name: "Sacred Lotus Extract", role: "Antioxidant Brightening", icon: "local_florist" },
       { name: "Wild Damask Rose Water", role: "Gentle Toning & Calming", icon: "water_drop" },
-      { name: "Virgin Cold-Pressed Coconut Oil", role: "Deep Lipid Nourishment", icon: "spa" },
+      { name: "Pure Virgin Coconut Oil", role: "Deep Lipid Nourishment", icon: "spa" },
       { name: "Pure Shea & Mango Butter", role: "Protective Barrier Repair", icon: "shield" },
       { name: "Kasturi Manjal (Wild Turmeric)", role: "Even Tone & Radiance", icon: "sunny" },
       { name: "Pure Sandalwood Essential Oil", role: "Soothes Irritation & Heat", icon: "eco" }
@@ -317,14 +318,15 @@ export const ASSETS = {
   kadambaBox: kadambaImg,
   bilvamBox: bilvamImg,
   kamalamBox: kamalamImg,
-  rudrakshaBox: rudrakshaImg
+  rudrakshaBox: rudrakshaImg,
+  divineBox: divineCollectionImg
 };
 
 export const FAQ_ITEMS = [
   {
     category: "About Soaps",
     question: "Are your soaps suitable for all skin types, including sensitive skin?",
-    answer: "Yes, absolutely. Our soaps are formulated with pure cold-pressed oils, unrefined plant butters, and gentle botanical extracts. They contain zero synthetic fragrances, parabens, or harsh detergents like SLS, making them exceptionally mild and soothing even for delicate and easily irritated skin."
+    answer: "Yes, absolutely. Our soaps are formulated with pure virgin plant oils, unrefined plant butters, and gentle botanical extracts. They contain zero synthetic fragrances, parabens, or harsh detergents like SLS, making them exceptionally mild and soothing even for delicate and easily irritated skin."
   },
   {
     category: "About Soaps",
@@ -334,7 +336,7 @@ export const FAQ_ITEMS = [
   {
     category: "About Soaps",
     question: "How long does a single 100g bar typically last?",
-    answer: "With daily bathing by an individual, one 100g bar generally lasts between 3 to 4 weeks. Because our bars are rich in natural glycerin and cold-pressed oils, we recommend keeping your bar in a well-draining wooden soap dish away from standing water between uses to maximize its longevity."
+    answer: "With daily bathing by an individual, one 100g bar generally lasts between 3 to 4 weeks. Because our bars are rich in natural glycerin and pure plant oils, we recommend keeping your bar in a well-draining wooden soap dish away from standing water between uses to maximize its longevity."
   },
   {
     category: "About Soaps",
@@ -377,7 +379,7 @@ export const COMING_SOON_PRODUCTS = [
   },
   {
     title: "Sacred Hair Elixir",
-    tagline: "Cold-Pressed Root Oil Infusion",
+    tagline: "Virgin Root Oil Infusion",
     desc: "Traditional Bhringraj, amla, and hibiscus root infusion for deep nourishment and luster.",
     icon: "water_drop"
   },
